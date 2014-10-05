@@ -12,15 +12,20 @@
   <link rel="import" href="/components/core-icon-button/core-icon-button.html">
   <link rel="import" href="/components/paper-tabs/paper-tabs.html">
   <link rel="import" href="/components/paper-input/paper-input.html">
+  <link rel="import" href="/components/paper-button/paper-button.html">
   <link rel="import" href="post-list.html">
   <link rel="import" href="page-about.html">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+  <!--plugin-->
+  <link type="text/css" rel="stylesheet" href="stylesheets/lightGallery.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/lightGallery.min.js"></script>
 </head>
 
 <body unresolved>
   <core-header-panel>
     <core-toolbar>
-      <a href="/" class="logo"><img src="/images/logos/umbrella-icon-withname.png"></a>
+      <a href="/" class="logo"><img src="/img/logos/umbrella-icon-withname.png"></a>
       <paper-tabs selected="about" valueattr="name" self-end>
         <paper-tab name="about">About</paper-tab>
         <paper-tab name="all">Localized</paper-tab>
@@ -32,6 +37,10 @@
       <!-- <paper-input label="Search"></paper-input> -->
       <post-list show="all"></post-list>
       <page-about></page-about>
+      <paper-button raised id="dynamic" class="info-btn">Info Kit</paper-button>
+      
+
+
     </div>
   </core-header-panel>
 
@@ -49,13 +58,54 @@
       }
       if (tabs.selected == "about") {
         //page_about = 
-        
+        page_about.show = tabs.selected; 
       }
-        
-
-
     });
   </script>
+
+
+  <!--lightGallery-->
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#dynamic').click(function(e){
+        $(this).lightGallery({
+            dynamic:true,
+            html:true,
+            mobileSrc:true,
+            dynamicEl:[
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/1.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/1.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/1.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/2.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/2.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/2.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/3.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/3.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/3.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/4.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/4.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/4.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/5.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/5.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/5.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/6.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/6.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/6.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/7.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/7.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/7.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/8.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/8.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/8.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/9.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/9.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/9.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/0.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/10.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/10.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/11.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/11.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/11.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/12.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/12.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/12.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/13.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/13.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/13.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/14.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/14.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/14.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/15.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/15.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/15.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/16.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/16.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/16.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/17.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/17.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/17.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/18.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/18.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/18.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/19.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/19.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/19.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/20.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/20.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/20.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/21.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/21.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/21.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/22.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/22.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/22.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/23.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/23.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/23.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/24.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/24.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/24.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/25.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/25.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/25.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/26.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/26.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/26.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/27.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/27.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/27.png"},
+                {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/28.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/28.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/28.png"}
+            ]
+        }); 
+    }) 
+  });
+</script>
 
   <!--Analytics-->
   <script>

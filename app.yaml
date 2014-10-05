@@ -23,8 +23,14 @@ handlers:
 - url: /api/
   static_dir: api/
 
-- url: /images/
-  static_dir: images/
+- url: /img/
+  static_dir: img/
+
+- url: /fonts/
+  static_dir: fonts/
+
+- url: /js/
+  static_dir: js/
 
 # Scripts
 
