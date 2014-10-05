@@ -1,0 +1,32 @@
+  html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+    font-family: 'RobotoDraft', sans-serif;
+  }
+  body #ink {
+      color: #ff4081 !important;
+
+  }
+  core-header-panel {
+    height: 100%;
+  }
+  core-toolbar {
+    background: #2c3e50;
+    color: white;
+  }
+  paper-tabs {
+    width: 100%;
+  }
+  .container {
+    width: 80%;
+    margin: 50px auto;
+  }
+  @media (min-width: 481px) {
+    paper-tabs {
+      width: 200px;
+    }
+    .container {
+      width: 400px;
+    }
+  }

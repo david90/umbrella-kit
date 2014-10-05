@@ -1,0 +1,58 @@
+[
+  {
+    "uid": 1,
+    "text" : "Hi. This is David.",
+    "username" : "Intro",
+    "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 2,
+    "text" : "Yes. I build software.",
+    "username" : "About me",
+    "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
+    "favorite": false
+  },
+    {
+    "uid": 3,
+    "text" : "So last year...",
+    "username" : "Dimitri",
+    "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 4,
+    "text" : "Pretty sure I came up with that first.",
+    "username" : "Ada",
+    "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 5,
+    "text" : "Yo, I heard you like components, so I put a component in your component.",
+    "username" : "Grace",
+    "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 6,
+    "text" : "Centralize, centrailize.",
+    "username" : "John",
+    "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 7,
+    "text" : "Has anyone seen my cat?",
+    "username" : "Zelda",
+    "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
+    "favorite": false
+  },
+  {
+    "uid": 8,
+    "text" : "Decentralize!",
+    "username" : "Norbert",
+    "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
+    "favorite": false
+  }
+]

@@ -9,5 +9,24 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+# Static Folder
+
+- url: /post-service/
+  static_dir: post-service/
+
+- url: /components/
+  static_dir: polymer/components/
+
+- url: /stylesheets/
+  static_dir: stylesheets/
+
+- url: /api/
+  static_dir: api/
+
+# Scripts
+
 - url: .*
   script: main.php
+
+- url: .*
+  script: php/main.php
