@@ -20,17 +20,18 @@
 <body unresolved>
   <core-header-panel>
     <core-toolbar>
-      <a href="/" class="logo"><img src="/images/logos/lockup.svg"></a>
-      <paper-tabs selected="all" valueattr="name" self-end>
-        <paper-tab name="all">ALL</paper-tab>
-        <paper-tab name="favorites">FAVORITES</paper-tab>
+      <a href="/" class="logo"><img src="/images/logos/umbrella-icon-withname.png"></a>
+      <paper-tabs selected="about" valueattr="name" self-end>
         <paper-tab name="about">About</paper-tab>
+        <paper-tab name="all">Localized</paper-tab>
+        <paper-tab name="pdfs">PDFs</paper-tab>
         <paper-tab name="credits">Credits</paper-tab>
       </paper-tabs>
     </core-toolbar>
     <div class="container" layout vertical center>
       <!-- <paper-input label="Search"></paper-input> -->
       <post-list show="all"></post-list>
+      <page-about></page-about>
     </div>
   </core-header-panel>
 
@@ -41,7 +42,18 @@
     var page_about = document.querySelector('page-about');
 
     tabs.addEventListener('core-select', function() {
-      list.show = tabs.selected;
+      
+
+      if (tabs.selected == "all" || tabs.selected == "pdf") {
+        list.show = tabs.selected;
+      }
+      if (tabs.selected == "about") {
+        //page_about = 
+        
+      }
+        
+
+
     });
   </script>
 

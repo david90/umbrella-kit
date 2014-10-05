@@ -23,6 +23,9 @@ handlers:
 - url: /api/
   static_dir: api/
 
+- url: /images/
+  static_dir: images/
+
 # Scripts
 
 - url: /post-list.html
