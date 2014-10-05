@@ -25,8 +25,14 @@ handlers:
 
 # Scripts
 
-- url: .*
-  script: main.php
+- url: /post-list.html
+  script: post-list.html
+
+- url: /post-card.html
+  script: post-card.html
+
+- url: /page-about.html
+  script: page-about.html
 
 - url: .*
-  script: php/main.php
+  script: main.php
