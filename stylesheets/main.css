@@ -9,7 +9,7 @@
 
   }
   core-header-panel {
-    height: 80%;
+    height: 100%;
   }
   core-toolbar {
     background: #1a1c25;
@@ -42,7 +42,11 @@
     }
   }
 
-
   .info-btn {
     background: #fff000;
+  }
+
+  /*About page*/
+  .about-text {
+    color: #ddd;
   }

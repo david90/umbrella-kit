@@ -17,7 +17,7 @@
 
     <post-service id="service" posts="{{posts}}"></post-service>
 
-    <div layout vertical center>
+    <div layout vertical center hidden?="{{show == 'none'}}">
       <template repeat="{{post in posts}}">
         <post-card
           favorite="{{post.favorite}}"
@@ -32,11 +32,6 @@
   </template>
 
   <script>
-  Polymer({
-    handleFavorite: function(event, detail, sender) {
-      var post = sender.templateInstance.model.post;
-      this.$.service.setFavorite(post.uid, post.favorite);
-    }
-  });
+  Polymer({});
   </script>
 </polymer-element>

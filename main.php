@@ -15,6 +15,7 @@
   <link rel="import" href="/components/paper-button/paper-button.html">
   <link rel="import" href="post-list.html">
   <link rel="import" href="page-about.html">
+  <link rel="import" href="page-credits.html">
   <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
   <!--plugin-->
   <link type="text/css" rel="stylesheet" href="stylesheets/lightGallery.css" />
@@ -36,10 +37,10 @@
     <div class="container" layout vertical center>
       <!-- <paper-input label="Search"></paper-input> -->
       <post-list show="all"></post-list>
-      <page-about></page-about>
+      <page-about hide="true"></page-about>
+      <page-credits hide="true"></page-credits>
       <paper-button raised id="dynamic" class="info-btn" label="Info Kit"></paper-button>
-      
-
+    
 
     </div>
   </core-header-panel>
@@ -49,16 +50,27 @@
     var tabs = document.querySelector('paper-tabs');
 
     var page_about = document.querySelector('page-about');
+    var page_credits = document.querySelector('page-credits');
 
     tabs.addEventListener('core-select', function() {
       
 
       if (tabs.selected == "all" || tabs.selected == "pdf") {
         list.show = tabs.selected;
+        page_credits.hide = "true";
+        page_about.hide = "true";
       }
-      if (tabs.selected == "about") {
+      else if (tabs.selected == "about") {
         //page_about = 
-        page_about.show = tabs.selected; 
+        page_about.hide = "false";
+        page_credits.hide = "true";
+        list.show = "none";
+      }
+      else if (tabs.selected == "credits") {
+        //page_about = 
+        page_about.hide = "true";
+        page_credits.hide = "false";
+        list.show = "none";
       }
     });
   </script>
@@ -69,8 +81,6 @@
   $(document).ready(function() {
     $('#dynamic').click(function(e){
         $(this).lightGallery({
-            mode:'fade',
-            speed: 500,
             dynamic:true,
             html:true,
             mobileSrc:true,
@@ -109,6 +119,21 @@
   });
 </script>
 
+  <!--Disqus-->
+ <!--    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'umbrellastory';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+ -->
   <!--Analytics-->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

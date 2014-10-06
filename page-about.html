@@ -1,4 +1,4 @@
-<polymer-element name="about-page" attributes="show">
+<polymer-element name="page-about" attributes="hide">
   <template>
     <style>
     :host {
@@ -8,11 +8,27 @@
     </style>
 
     
-    <div layout vertical center>
-      About
+    <div layout vertical center hidden?="{{hide == 'true'}}">
+      <h1>About</h1>
+      <div class="about-text">
+        一切, 要由香港成為中國的特別行政區開始說起.<p>
+
+'基本法'承諾香港人擁有普選的權利. 可惜, 人大決定我們有西選無普選.<p>
+
+在政府多次一意孤行後, 為了令政府正視市民的訢求. 我們唯有佔領街道. 除了這個方法, 我們已別無他法.<p>
+
+9月22日, 香港學生專上聯會發起罷課. 同月26 日, 學民思潮加入罷課, 並衝入公民廣場,13人被拘捕. 此後更多人加入罷課, 多於60 人被捕.<p> 同月28 日, '佔領中環'發起人宣佈開始'佔中'行動.警方出動防暴部隊.
+
+即使面對警方的胡椒噴霧和催淚彈, 我們都只會拿起雨傘保護自己, 而不作出任何攻擊, 所以外國媒體給了一個美麗的名字--雨傘運動, 以形容我們的和平抗爭<p>
+
+一面上課或者上班,一面去佔領街頭的生活,確實很疲累. 我們不知道能否抗爭成功,什麼時候可以抗爭成功, 甚至不知道我們能否安全回家. 可是, 為了香港, 我們絕不放棄.<p>
+
+歡迎你把此網頁傳給你的朋友. 多一個人知道, 我們就多一分力量.<p>
+
+香港加油!
+      </div>
     </div>
   </template>
-
   <script>
   Polymer({
     handleFavorite: function(event, detail, sender) {

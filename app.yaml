@@ -43,5 +43,11 @@ handlers:
 - url: /page-about.html
   script: page-about.html
 
+- url: /page-credits.html
+  script: page-credits.html
+
+- url: /page-embed-imgur.html
+  script: page-embed-imgur.html
+
 - url: .*
   script: main.php
