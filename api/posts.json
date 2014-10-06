@@ -2,56 +2,56 @@
   {
     "uid": 1,
     "text" : "x.",
-    "username" : "Intro",
+    "username" : "Chinese - ZH",
     "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
     "favorite": false
   },
   {
     "uid": 2,
     "text" : "y.",
-    "username" : "About me",
+    "username" : "English",
     "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
     "favorite": false
   },
     {
     "uid": 3,
     "text" : "So last year...",
-    "username" : "Dimitri",
+    "username" : "French",
     "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
     "favorite": false
   },
   {
     "uid": 4,
     "text" : "Pretty sure I came up with that first.",
-    "username" : "Ada",
+    "username" : "Japanese",
     "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
     "favorite": false
   },
   {
     "uid": 5,
     "text" : "Yo, I heard you like components, so I put a component in your component.",
-    "username" : "Grace",
+    "username" : "Korean",
     "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
     "favorite": false
   },
   {
     "uid": 6,
     "text" : "Centralize, centrailize.",
-    "username" : "John",
+    "username" : "German",
     "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
     "favorite": false
   },
   {
     "uid": 7,
     "text" : "Has anyone seen my cat?",
-    "username" : "Zelda",
+    "username" : "Danish",
     "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
     "favorite": false
   },
   {
     "uid": 8,
     "text" : "Decentralize!",
-    "username" : "Norbert",
+    "username" : "Thai",
     "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
     "favorite": false
   }

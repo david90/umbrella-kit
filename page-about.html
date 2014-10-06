@@ -1,14 +1,28 @@
 <polymer-element name="page-about" attributes="hide">
   <template>
     <style>
+  /*About page*/
+    .about-text {
+      color: #333;
+    }
+
     :host {
       display: block;
       width: 100%;
     }
-    </style>
 
-    
+    .header-banner-about {
+      min-height: 300px;
+      width: 100%;
+      background-color: #fff000;
+      background-repeat: no-repeat;
+      background-image: url("/img/umbrella-banner-about.png");
+      background-position: center;
+      background-size: contain;
+    }
+    </style>
     <div layout vertical center hidden?="{{hide == 'true'}}">
+      <div class="header-banner-about"></div>
       <h1>About</h1>
       <div class="about-text">
         一切, 要由香港成為中國的特別行政區開始說起.<p>
@@ -30,11 +44,6 @@
     </div>
   </template>
   <script>
-  Polymer({
-    handleFavorite: function(event, detail, sender) {
-      var post = sender.templateInstance.model.post;
-      this.$.service.setFavorite(post.uid, post.favorite);
-    }
-  });
+  Polymer({});
   </script>
 </polymer-element>
