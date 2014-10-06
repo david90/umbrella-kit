@@ -25,11 +25,11 @@
 <body unresolved>
   <core-header-panel>
     <core-toolbar>
-      <a href="/" class="logo"><img src="/img/logos/umbrella-icon-withname.png"></a>
+      <a href="/" class="logo"></a>
       <paper-tabs selected="about" valueattr="name" self-end>
         <paper-tab name="about">About</paper-tab>
-        <paper-tab name="all">Localized</paper-tab>
-        <paper-tab name="pdfs">PDFs</paper-tab>
+        <paper-tab name="all">Kits</paper-tab>
+        <paper-tab name="pdf">PDFs</paper-tab>
         <paper-tab name="credits">Credits</paper-tab>
       </paper-tabs>
     </core-toolbar>
@@ -37,7 +37,7 @@
       <!-- <paper-input label="Search"></paper-input> -->
       <post-list show="all"></post-list>
       <page-about></page-about>
-      <paper-button raised id="dynamic" class="info-btn">Info Kit</paper-button>
+      <paper-button raised id="dynamic" class="info-btn" label="Info Kit"></paper-button>
       
 
 
@@ -62,8 +62,8 @@
       }
     });
   </script>
-
-
+  <!--Addthis-->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54322cf96007d832" async></script>
   <!--lightGallery-->
   <script type="text/javascript">
   $(document).ready(function() {

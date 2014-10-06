@@ -9,7 +9,7 @@
 
   }
   core-header-panel {
-    height: 100%;
+    height: 80%;
   }
   core-toolbar {
     background: #1a1c25;
@@ -22,6 +22,14 @@
     width: 80%;
     margin: 50px auto;
   }
+  .logo {
+    background-image: url("../img/logos/umbrella-icon-withname.png");
+    background-size: 186px 70px;
+    background-repeat: no-repeat;
+    width : 120px;
+    height: 70px;
+    display: block;
+  }
   @media (min-width: 481px) {
     paper-tabs {
       width: 400px;
@@ -29,10 +37,11 @@
     .container {
       width: 400px;
     }
+    .logo {
+      width: 186px;
+    }
   }
-  .logo img {
-    height: 70px;
-  }
+
 
   .info-btn {
     background: #fff000;
