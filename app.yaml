@@ -32,13 +32,17 @@ handlers:
 - url: /js/
   static_dir: js/
 
+
+- url: /outdatedbrowser/
+  static_dir: outdatedbrowser/
+
 # Scripts
 
-- url: /post-list.html
-  script: post-list.html
+- url: /kit-list.html
+  script: kit-list.html
 
-- url: /post-card.html
-  script: post-card.html
+- url: /kit-card.html
+  script: kit-card.html
 
 - url: /page-about.html
   script: page-about.html
@@ -48,6 +52,11 @@ handlers:
 
 - url: /page-embed-imgur.html
   script: page-embed-imgur.html
+
+
+
+- url: /pdf/.*
+  script: redirect_pdf.php
 
 - url: .*
   script: main.php

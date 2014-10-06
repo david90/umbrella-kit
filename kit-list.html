@@ -1,0 +1,40 @@
+﻿<link rel="import" href="/components/polymer/polymer.html">
+<link rel="import" href="/components/paper-input/paper-input.html">
+<link rel="import" href="/post-service/post-service.html">
+<link rel="import" href="kit-card.html">
+
+<polymer-element name="kit-list" attributes="show">
+  <template>
+    <style>
+    :host {
+      display: block;
+      width: 100%;
+    }
+    kit-card {
+      margin-bottom: 30px;
+    }
+    </style>
+
+    <post-service id="service" posts="{{posts}}"></post-service>
+
+    <div layout vertical center hidden?="{{show == 'none'}}">
+      <h1>Info Kits</h1>
+      <h3>《雨傘運動懶人包》</h3>
+      <p> We've prepared localized info kits for you to share about <code>#umbrellaRevolution</code>. </p>
+      <template repeat="{{post in posts}}">
+        <kit-card
+          favorite="{{post.favorite}}"
+          on-favorite-tap="{{handleFavorite}}"
+          hidden?="{{show == 'favorites' && !post.favorite}}">
+          <img src="{{post.avatar}}" width="70" height="70">
+          <h2>{{post.username}}</h2>
+          <paper-input multiline floatinglabel rows="fit" label="Note #{{post.uid}}" inputValue="{{post.text}}"> </paper-input>
+        </kit-card>
+      </template>
+    </div>
+  </template>
+
+  <script>
+  Polymer({});
+  </script>
+</polymer-element>

@@ -5,6 +5,14 @@
   <title>Umbrella Story - All about #umbrellaRevolution</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="Umbrella Story - All about #umbrellaRevolution" />
+  <meta name="keywords" content="hong kong, hk, democracy, oclp, umbrella revolution, umbrellarevolution" />
+  <meta property="og:type" content="website">
+  <meta name="author" content="Umbrella Story" />
+  <? $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://'; ?>
+  <meta property="og:image" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>/img/og-thumb.png" />
+  <meta property="og:title"  content="Umbrella Story - All about #umbrellaRevolution" />
+  <meta property="og:description"  content="" />
   <script src="/components/platform/platform.js"></script>
   <link rel="import" href="/components/font-roboto/roboto.html">
   <link rel="import" href="/components/core-header-panel/core-header-panel.html">
@@ -13,18 +21,25 @@
   <link rel="import" href="/components/paper-tabs/paper-tabs.html">
   <link rel="import" href="/components/paper-input/paper-input.html">
   <link rel="import" href="/components/paper-button/paper-button.html">
-  <link rel="import" href="/post-list.html">
+  <link rel="import" href="/kit-list.html">
   <link rel="import" href="/page-about.html">
   <link rel="import" href="/page-credits.html">
   <link rel="import" href="/page-embed-imgur.html">
   <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
   <!--plugin-->
   <link type="text/css" rel="stylesheet" href="stylesheets/lightGallery.css" />
+  <link rel="stylesheet" href="outdatedbrowser/outdatedBrowser.min.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/lightGallery.min.js"></script>
+  <script src="outdatedbrowser/outdatedBrowser.min.js"></script>
 </head>
 
 <body unresolved>
+  <div id="outdated">
+       <h6>Your browser is out-of-date!</h6>
+       <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+       <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+  </div>
   <core-header-panel>
     <core-toolbar>
       <a href="/" class="logo"></a>
@@ -36,7 +51,7 @@
       </paper-tabs>
     </core-toolbar>
     <div class="container" layout vertical center>
-      <post-list show="all"></post-list>
+      <kit-list show="all"></kit-list>
       <page-about hide="true"></page-about>
       <page-credits hide="true"></page-credits>
       <page-embed-imgur hide="true"></page-embed-imgur>
@@ -61,7 +76,7 @@
   </core-header-panel>
 
   <script>
-    var list = document.querySelector('post-list');
+    var list = document.querySelector('kit-list');
     var tabs = document.querySelector('paper-tabs');
 
     var page_about = document.querySelector('page-about');
@@ -101,7 +116,6 @@
   <script type="text/javascript">
   $(document).ready(function() {
     // if have hash
-    console.log("window.location.hash="+window.location.hash);
     var hash = window.location.hash;
     if (hash) {
       var hashName = hash.replace("#", "");
@@ -109,7 +123,7 @@
       tabs.select = hashName;
     }
 
-    var imagList = [
+    var imageList = [
                 {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/1.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/1.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/1.png"},
                 {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/2.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/2.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/2.png"},
                 {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/3.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/3.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/3.png"},
@@ -146,7 +160,7 @@
             dynamic:true,
             html:true,
             mobileSrc:true,
-            dynamicEl: imageList;
+            dynamicEl: imageList
         }); 
     }) 
   });
@@ -163,6 +177,28 @@
     ga('send', 'pageview');
 
   </script>
+  <!-- Outdated browser -->
+    <script>
+        function addLoadEvent(func) {
+          var oldonload = window.onload;
+          if (typeof window.onload != 'function') {
+              window.onload = func;
+          } else {
+              window.onload = function() {
+                  oldonload();
+                  func();
+              }
+          }
+      }
+      //call plugin function after DOM ready
+      addLoadEvent(
+          outdatedBrowser({
+              bgColor: '#f25648',
+              color: '#ffffff',
+              lowerThan: 'transform'
+          })
+      );
+    </script>
 </body>
 
 </html>
