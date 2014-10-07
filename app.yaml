@@ -32,7 +32,6 @@ handlers:
 - url: /js/
   static_dir: js/
 
-
 - url: /outdatedbrowser/
   static_dir: outdatedbrowser/
 
@@ -53,10 +52,20 @@ handlers:
 - url: /page-embed-imgur.html
   script: page-embed-imgur.html
 
-
+- url: /page-instagram.html
+  script: page-instagram.html
 
 - url: /pdf/.*
   script: redirect_pdf.php
+
+- url: /view/.*
+  script: main.php
+
+- url: /config.php
+  script: config.php
+
+- url: /error.php
+  script: error.php
 
 - url: .*
   script: main.php

@@ -1,10 +1,32 @@
 [
-{
-  "lang":"ZH",
-  "lang_name":"Chinese",
-  "image_url_prefix":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/",
-  "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
-  "pdf_url":"ERROR",
-  "pages":28
-}
+  {
+    "uid": 1,
+    "lang":"ZH",
+    "lang_name":"中文 (Chinese)",
+    "image_url_prefix":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/",
+    "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
+    "pdf_url":"/pdf/zh-hk",
+    "notes":"",
+    "pages":28
+  },
+  {
+    "uid": 2,
+    "lang":"EN",
+    "lang_name":"English",
+    "image_url_prefix":"https://dfg63nb4d89j7.cloudfront.net/en/",
+    "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
+    "pdf_url":"/pdf/en",
+    "notes":"Original Copy",
+    "pages":28
+  },
+  {
+    "uid": 3,
+    "lang":"FR",
+    "lang_name":"Français (French)",
+    "image_url_prefix":"https://dfg63nb4d89j7.cloudfront.net/fr/",
+    "avatar" : "https://myfoodcoach.kidney.org/assets/thumbnail/avatar-placeholder.jpg",
+    "pdf_url":"/pdf/fr",
+    "notes":"",
+    "pages":28
+  }
 ]

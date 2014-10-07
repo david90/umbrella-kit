@@ -13,28 +13,65 @@
     kit-card {
       margin-bottom: 30px;
     }
+    core-icon-button {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+    }
+    core-icon-button {
+      fill: #636363;
+    }
+    :host([favorite]) core-icon-button {
+      fill: #da4336;
+    }
+    .info-btn {
+      background: #fff000;
+      margin: 0 10px;
+    }
+    a {
+      color: #333;
+    }
     </style>
 
     <post-service id="service" posts="{{posts}}"></post-service>
 
     <div layout vertical center hidden?="{{show == 'none'}}">
       <h1>Info Kits</h1>
+
       <h3>《雨傘運動懶人包》</h3>
-      <p> We've prepared localized info kits for you to share about <code>#umbrellaRevolution</code>. </p>
+      <p> We've prepared localized info kits for you to read and share about <code>#umbrellaRevolution</code>. 
+        <br>Welcome to download PDF to print as posters. </p>
       <template repeat="{{post in posts}}">
-        <kit-card
-          favorite="{{post.favorite}}"
-          on-favorite-tap="{{handleFavorite}}"
-          hidden?="{{show == 'favorites' && !post.favorite}}">
+        <kit-card>
           <img src="{{post.avatar}}" width="70" height="70">
-          <h2>{{post.username}}</h2>
-          <paper-input multiline floatinglabel rows="fit" label="Note #{{post.uid}}" inputValue="{{post.text}}"> </paper-input>
+          <h2>{{post.lang_name}}</h2>
+          <a href="{{post.pdf_url}}" target="_blank">
+            <core-icon-button
+            id="favicon"
+            icon="file-download"
+            title="Download"
+            on-tap="{{downloadTapped}}"> PDF
+            </core-icon-button>
+          </a>
+          <paper-input disabled multiline floatinglabel rows="fit" label="{{post.notes}}" value=""></paper-input>
+
         </kit-card>
       </template>
+      <img src="/img/umbrella_at_cwb.png" style="min-width:100%" /> 
     </div>
   </template>
 
   <script>
-  Polymer({});
+  Polymer('kit-list', {
+    publish: {
+      favorite: {
+        value: false,
+        reflect: true
+      }
+    },
+    favoriteTapped: function(event, detail, sender) {
+      this.fire('download-tap');
+    }
+  });
   </script>
 </polymer-element>

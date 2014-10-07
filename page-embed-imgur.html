@@ -1,13 +1,17 @@
-<polymer-element name="page-embed-imgur" attributes="hide">
+<polymer-element name="page-embed-imgur" attributes="hide combineURL">
   <template>
     <style>
     :host {
       display: block;
       width: 100%;
     }
+    .combine-img {
+        max-width: 100%;
+        padding: 2px;
+    }
     </style>
     <div layout vertical center hidden?="{{hide == 'true'}}">
-<a href="http://imgur.com/NyhHEmw" title="What's happening in Hong Kong?"><img src="http://i.imgur.com/NyhHEmw.jpg" alt="What's happening in Hong Kong?" title="Hosted by imgur.com" /></a>
+<a href="https://dfg63nb4d89j7.cloudfront.net/en/md/combined.jpg" title="What's happening in Hong Kong?"><img src="https://dfg63nb4d89j7.cloudfront.net/en/md/combined.jpg" alt="What's happening in Hong Kong?" title="What's happening in Hong Kong?" class="combine-img" /></a>
 
   </template>
   <script>

@@ -46,4 +46,13 @@
     background: #fff000;
   }
 
- 
+  /* instagram */
+  .instagram {
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .instagram-placeholder {
+    float: left;
+    margin-right: 5px;
+  }
