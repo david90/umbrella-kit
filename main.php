@@ -54,7 +54,7 @@
   </div>
   <core-header-panel>
     <core-toolbar>
-      <a href="#home" class="logo"></a>
+      <a href="#" class="logo"></a>
       
       <?
         // Select default page 
@@ -62,10 +62,10 @@
         $url = $_SERVER['REQUEST_URI']; 
         $tokens = explode('/', $url);
         $tab =  strtolower($tokens[sizeof($tokens)-1]);
-
+        $prefered_lang =  strtolower($tokens[sizeof($tokens)-2]);
         $url_parts = parse_url($tab);
         $tab = $url_parts['path'];
-
+        
         if ($tab == "") {
           $tab = "home";
         } else if ($tab == "view") {
@@ -197,6 +197,10 @@
         page_about.hide = "true";
         page_credits.hide = "true";
         page_embed_imgur.hide = "false";
+        <? if(!is_permitted_lang($prefered_lang)){ 
+          $prefered_lang = "en";
+         } ?>
+        page_embed_imgur.prefered_lang = "<?echo $prefered_lang; ?>";
         page_instagram.hidden = "true";
         list.show = "none";
       } else if (tabs.selected == "instagram") {

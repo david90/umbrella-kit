@@ -1,6 +1,13 @@
 <?
 // Put down all configs in the file.
 
+$PERMITTED_LANG = array("zh-hk","en","fr","de","da","th","es","jp");
+
+function is_permitted_lang($test_lang) {
+    global $PERMITTED_LANG;
+    return in_array($test_lang, $PERMITTED_LANG);
+}
+
 $IMAGE_URL_PREFIX = 'https://dfg63nb4d89j7.cloudfront.net/';
 
 $IMAGE_ZH_JSON = generate_image_json($IMAGE_URL_PREFIX, "zh-hk", 28);
