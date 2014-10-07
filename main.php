@@ -17,9 +17,8 @@
     if (file_exists($s_metafile))
       include($s_metafile);
     else
-      include('meta/en_US_meta.php');
+      include('meta/en_us_meta.php');
   ?>
-  <meta property="og:url" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>" />
 
   <script src="/components/platform/platform.js"></script>
   <link rel="shortcut icon" id="favicon" href="/favicon.ico">
