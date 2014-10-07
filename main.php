@@ -12,12 +12,14 @@
   <meta name="author" content="Umbrella Story" />
   <? $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://'; ?>
 
+  <meta property="og:url" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>" />
+  <meta property="og:type" content="website" />
   <?php 
     $s_metafile = 'meta/' . $_GET['fb_locale'] . '_meta.php';
     if (file_exists($s_metafile))
       include($s_metafile);
     else
-      include('meta/en_us_meta.php');
+      include('meta/en_US_meta.php');
   ?>
 
   <script src="/components/platform/platform.js"></script>
