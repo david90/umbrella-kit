@@ -3,7 +3,6 @@
  require_once("config.php"); ?>
 <!doctype html>
 <html>
-
 <head>
   <title>Umbrella Story - All about #umbrellaRevolution</title>
   <meta charset="utf-8">
@@ -12,15 +11,16 @@
   <meta property="og:type" content="website">
   <meta name="author" content="Umbrella Story" />
   <? $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://'; ?>
-  <meta property="og:title" content="Umbrella Story - All about #umbrellaRevolution" />
-  <meta property="og:image" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>/img/og-thumb.png?34234r13" />
+
+  <?php 
+    $s_metafile = 'meta/' . $_GET['fb_locale'] . '_meta.php';
+    if (file_exists($s_metafile))
+      include($s_metafile);
+    else
+      include('meta/en_US_meta.php');
+  ?>
   <meta property="og:url" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>" />
-  <meta property="og:image:url" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>/img/og-thumb.png?3545" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="300" />
-  <meta property="og:image:height" content="300" />
-  <meta property="og:site_name" content="Umbrella Story"/>
-  <meta property="og:description" content="What's happening in Hong Kong? Do you know what is #umbrellaRevolution?" />
+
   <script src="/components/platform/platform.js"></script>
   <link rel="shortcut icon" id="favicon" href="/favicon.ico">
   <link rel="import" href="/components/font-roboto/roboto.html">
