@@ -17,8 +17,8 @@
     $tab = "all";
   }
 
-  // Handle Prefered language
-  $prefered_lang =  strtolower($tokens[sizeof($tokens)-2]);
+  // Handle Preferred language
+  $preferred_lang =  strtolower($tokens[sizeof($tokens)-2]);
 ?>
 
 <!doctype html>
@@ -197,10 +197,10 @@
         page_about.hide = "true";
         page_credits.hide = "true";
         page_embed_imgur.hide = "false";
-        <? if(!is_permitted_lang($prefered_lang)){ 
-          $prefered_lang = "en";
+        <? if(!is_permitted_lang($preferred_lang)){ 
+          $preferred_lang = "en";
          } ?>
-        page_embed_imgur.prefered_lang = "<?echo $prefered_lang; ?>";
+        page_embed_imgur.preferred_lang = "<?echo $preferred_lang; ?>";
         page_instagram.hidden = "true";
         list.show = "none";
       } else if (tabs.selected == "instagram") {
