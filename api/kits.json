@@ -52,5 +52,32 @@
     "pdf_url":"/pdf/kr",
     "status":"waiting",
     "notes":"Waiting for Proof-read"
+  },
+  {
+    "uid": 6,
+    "lang":"de",
+    "lang_name":"Deutsch (German)",
+    "avatar" : "/img/lang/flag_rotate-de.png",
+    "pdf_url":"/pdf/de",
+    "status":"waiting",
+    "notes":"Translation in progress"
+  },
+  {
+    "uid": 7,
+    "lang":"es",
+    "lang_name":"Español (Spanish)",
+    "avatar" : "/img/lang/flag_rotate-es.png",
+    "pdf_url":"/pdf/es",
+    "status":"waiting",
+    "notes":"Translation in progress"
+  },
+  {
+    "uid": 0,
+    "lang":"none",
+    "lang_name":"More languages",
+    "avatar" : "/img/lang/flag_rotate-world.png",
+    "pdf_url":"/pdf/none",
+    "status":"waiting",
+    "notes":"We welcome your contribution! \n\nIf you want to help localizing this Info kit to any language you master. \nPlease contact us translate@umbrellastory.hk "
   }
 ]
