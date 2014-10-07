@@ -35,12 +35,12 @@
   <!-- <link rel="import" href="/page-instagram.html"> -->
   <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
   <!--plugin-->
-  <link type="text/css" rel="stylesheet" href="stylesheets/lightGallery.css" />
-  <link rel="stylesheet" href="outdatedbrowser/outdatedBrowser.min.css">
+  <link type="text/css" rel="stylesheet" href="/stylesheets/lightGallery.css" />
+  <link rel="stylesheet" href="/outdatedbrowser/outdatedBrowser.min.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-instagram/0.3.1/instagram.min.js"></script>
-  <script src="js/lightGallery.min.js"></script>
-  <script src="outdatedbrowser/outdatedBrowser.min.js"></script>
+  <script src="/js/lightGallery.min.js"></script>
+  <script src="/outdatedbrowser/outdatedBrowser.min.js"></script>
 </head>
 
 <body unresolved>
