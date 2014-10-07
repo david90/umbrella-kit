@@ -1,6 +1,26 @@
 <?
   @$get_lang = $_GET["lang"];
- require_once("config.php"); ?>
+ require_once("config.php"); 
+
+  // Select default page 
+  $url = $_SERVER['REQUEST_URI']; 
+  $tokens = explode('/', $url);
+  $tab =  strtolower($tokens[sizeof($tokens)-1]);
+  $url_parts = parse_url($tab);
+  $tab = $url_parts['path'];
+  
+  if ($tab == "") {
+    $tab = "home";
+  } else if ($tab == "view") {
+    // Handle Show album
+    $show_album = true;
+    $tab = "all";
+  }
+
+  // Handle Prefered language
+  $prefered_lang =  strtolower($tokens[sizeof($tokens)-2]);
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -55,26 +75,6 @@
   <core-header-panel>
     <core-toolbar>
       <a href="#" class="logo"></a>
-      
-      <?
-        // Select default page 
-
-        $url = $_SERVER['REQUEST_URI']; 
-        $tokens = explode('/', $url);
-        $tab =  strtolower($tokens[sizeof($tokens)-1]);
-        $prefered_lang =  strtolower($tokens[sizeof($tokens)-2]);
-        $url_parts = parse_url($tab);
-        $tab = $url_parts['path'];
-        
-        if ($tab == "") {
-          $tab = "home";
-        } else if ($tab == "view") {
-          // Handle Show album
-          $show_album = true;
-          $tab = "all";
-        }
-      ?>
-
       <paper-tabs selected="<?echo $tab;?>" valueattr="name" self-end>
         <paper-tab name="home">Home</paper-tab>
         <paper-tab name="about">About</paper-tab>
