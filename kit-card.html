@@ -1,6 +1,5 @@
 ﻿<link rel="import" href="/components/polymer/polymer.html">
 <link rel="import" href="/components/core-icon-button/core-icon-button.html">
-
 <polymer-element name="kit-card">
   <template>
     <style>
@@ -40,12 +39,6 @@
     :host([favorite]) core-icon-button {
       fill: #da4336;
     }
-    .info-btn {
-      background: #fff000;
-      margin: 0 10px;
-      font-size: 12px;
-      min-width: 60px;
-    }
     a {
       color: #333;
     }
@@ -54,9 +47,9 @@
       <content select="img"></content>
       <content select="h2"></content>
       <content select="paper-button"></content>
+      <content select="paper-button"></content>
     </div>
     <content select="a"></content>
-     
     <content></content>
   </template>
   <script>

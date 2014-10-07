@@ -2,7 +2,6 @@
 <link rel="import" href="/components/paper-input/paper-input.html">
 <link rel="import" href="/post-service/post-service.html">
 <link rel="import" href="kit-card.html">
-
 <polymer-element name="kit-list" attributes="show">
   <template>
     <style>
@@ -28,12 +27,22 @@
       background: #fff000;
       margin: 0 10px;
       font-size: 12px;
+      min-width: 60px;
+    }
+    .share-btn {
+      background: #f39c12;
+      margin: 0;
+      font-size: 12px;
+      min-width: 60px;
     }
 @media (max-width: 600px) {    
     .info-btn {
       background: #fff000;
       margin: 0 10px;
-      font-size: 8px;
+      font-size: 10px;
+    }
+    .share-btn {
+      font-size: 10px;
     }
   }
     a {
@@ -68,12 +77,10 @@
           </a>
           <paper-button raised class="info-btn" label="View" hidden?="{{post.status != 'ready'}}" attributes="lang" lang="{{post.lang}}" on-tap="{{viewTapped}}"></paper-button>
           <paper-input disabled multiline rows="fit" label="{{post.notes}}" value=""></paper-input>
-
+          <paper-button raised label="Share" hidden?="{{post.status != 'ready'}}" class="share-btn" attributes="lang" lang="{{post.lang}}" on-tap="{{shareTapped}}"></paper-button>
         </kit-card>
       </template>
     </div>
-
-    <say-hello name="Larry"></say-hello>
 
   </template>
 
@@ -84,7 +91,14 @@
       this.fire('view-tap', {lang: kit.lang});
     },
     PDFTapped: function(event, detail, sender) {
+    },
+    shareTapped : function(event, detail, sender) {
+      var kit = sender.templateInstance.model.post;
+      this.fire('share-tap', {lang: kit.lang});
     }
   });
+
+
   </script>
+
 </polymer-element>
