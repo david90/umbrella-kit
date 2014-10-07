@@ -19,12 +19,12 @@
     <meta property="og:image:height" content="300" />
     <meta property="og:site_name" content="Umbrella Story"/>
     <meta property="og:description" content="Why sharing this page? Please go to <? echo $protocol . $_SERVER['HTTP_HOST']; ?> instead." />
-    <link rel="shortcut icon" id="favicon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="stylesheets/error.css" />
+    <link rel="shortcut icon" id="favicon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/error.css" />
 
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="outdatedbrowser/outdatedBrowser.min.css">    
-    <link rel="stylesheet" type="text/css" href="css/elusive-webfont.css" />
+    <link rel="stylesheet" href="/outdatedbrowser/outdatedBrowser.min.css">    
+    <link rel="stylesheet" type="text/css" href="/css/elusive-webfont.css" />
   </head>
   <body class="error" id="body">
     <div id="outdated">

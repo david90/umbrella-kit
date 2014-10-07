@@ -1,35 +1,33 @@
 <?
 // Put down all configs in the file.
 
+$IMAGE_URL_PREFIX = 'https://dfg63nb4d89j7.cloudfront.net/';
 
-$IMAGE_ZH_JSON = 
-  ' [{"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/1.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/1.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/1.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/2.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/2.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/2.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/3.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/3.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/3.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/4.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/4.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/4.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/5.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/5.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/5.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/6.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/6.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/6.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/7.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/7.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/7.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/8.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/8.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/8.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/9.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/9.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/9.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/10.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/10.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/10.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/11.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/11.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/11.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/12.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/12.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/12.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/13.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/13.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/13.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/14.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/14.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/14.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/15.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/15.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/15.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/16.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/16.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/16.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/17.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/17.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/17.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/18.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/18.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/18.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/19.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/19.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/19.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/20.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/20.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/20.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/21.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/21.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/21.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/22.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/22.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/22.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/23.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/23.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/23.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/24.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/24.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/24.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/25.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/25.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/25.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/26.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/26.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/26.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/27.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/27.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/27.png"},
-    {"src":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/md/28.png","thumb":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/28.png", "mobileSrc":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/sm/28.png"}]'
+$IMAGE_ZH_JSON = generate_image_json($IMAGE_URL_PREFIX, "zh-hk", 28);
+$IMAGE_EN_JSON = generate_image_json($IMAGE_URL_PREFIX, "en", 28);
+$IMAGE_FR_JSON = generate_image_json($IMAGE_URL_PREFIX, "fr", 28);
+$IMAGE_DE_JSON = generate_image_json($IMAGE_URL_PREFIX, "de", 28);
+$IMAGE_DA_JSON = generate_image_json($IMAGE_URL_PREFIX, "da", 28);
+$IMAGE_TH_JSON = generate_image_json($IMAGE_URL_PREFIX, "th", 28);
+$IMAGE_ES_JSON = generate_image_json($IMAGE_URL_PREFIX, "es", 28);
+$IMAGE_JP_JSON = generate_image_json($IMAGE_URL_PREFIX, "jp", 28);
 
+
+function generate_image_json ($prefix_url, $lang ,$count) {
+
+    $result_json .= '[';
+    for ($i = 1; $i<=$count; $i++) {
+        $result_json .= '{';
+        $result_json .= '"src":"'.$prefix_url.$lang.'/md/'.$i.'.png",';
+        $result_json .= '"thumb":"'.$prefix_url.$lang.'/sm/'.$i.'.png",';
+        $result_json .= '"mobileSrc":"'.$prefix_url.$lang.'/sm/'.$i.'.png"';
+        $result_json .= '}';
+
+        if ($i != $count) {$result_json .= ',';}
+    }
+    $result_json .= ']';
+
+    return $result_json;
+
+}
 ?>

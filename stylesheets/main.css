@@ -8,6 +8,9 @@
       color: #ff4081 !important;
 
   }
+  a {
+    color: #333;
+  }
   core-header-panel {
     height: 99%;
   }
@@ -41,9 +44,12 @@
       width: 186px;
     }
   }
-
   .info-btn {
     background: #fff000;
+  }
+
+  .get-kit-arrow {
+    margin-bottom: 10px;
   }
 
   /* instagram */

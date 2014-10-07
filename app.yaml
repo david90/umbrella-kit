@@ -58,7 +58,7 @@ handlers:
 - url: /pdf/.*
   script: redirect_pdf.php
 
-- url: /view/.*
+- url: /view
   script: main.php
 
 - url: /config.php

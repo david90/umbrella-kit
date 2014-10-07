@@ -1,32 +1,56 @@
 [
   {
     "uid": 1,
-    "lang":"ZH",
+    "lang":"zh-hk",
     "lang_name":"中文 (Chinese)",
-    "image_url_prefix":"https://dfg63nb4d89j7.cloudfront.net/zh-hk/",
     "avatar" : "/img/lang/flag_rotate-hk.png",
     "pdf_url":"/pdf/zh-hk",
-    "notes":"",
-    "pages":28
+    "notes":"Ready",
+    "status":"ready"
   },
   {
     "uid": 2,
-    "lang":"EN",
+    "lang":"en",
     "lang_name":"English",
-    "image_url_prefix":"https://dfg63nb4d89j7.cloudfront.net/en/",
     "avatar" : "/img/lang/flag_rotate-en.png",
     "pdf_url":"/pdf/en",
-    "notes":"Original Copy",
-    "pages":28
+    "status":"ready",
+    "notes":"Ready"
   },
   {
     "uid": 3,
-    "lang":"FR",
+    "lang":"fr",
     "lang_name":"Français (French)",
-    "image_url_prefix":"https://dfg63nb4d89j7.cloudfront.net/fr/",
     "avatar" : "/img/lang/flag_rotate-fr.png",
     "pdf_url":"/pdf/fr",
-    "notes":"",
-    "pages":28
+    "status":"ready",
+    "notes":"Ready"
+  },
+  {
+    "uid": 4,
+    "lang":"da",
+    "lang_name":"Dansk (Danish)",
+    "avatar" : "/img/lang/flag_rotate-da.png",
+    "pdf_url":"/pdf/da",
+    "status":"waiting",
+    "notes":"Waiting for typesetting"
+  },
+  {
+    "uid": 5,
+    "lang":"jp",
+    "lang_name":"日本語 (Japan)",
+    "avatar" : "/img/lang/flag_rotate-jp.png",
+    "pdf_url":"/pdf/jp",
+    "status":"waiting",
+    "notes":"Waiting for typesetting"
+  },
+  {
+    "uid": 5,
+    "lang":"kr",
+    "lang_name":"한국어 (Korean)",
+    "avatar" : "/img/lang/flag_rotate-kr.png",
+    "pdf_url":"/pdf/kr",
+    "status":"waiting",
+    "notes":"Waiting for Proof-read"
   }
 ]

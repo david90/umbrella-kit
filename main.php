@@ -1,4 +1,6 @@
-<? require_once("config.php"); ?>
+<?
+  @$get_lang = $_GET["lang"];
+ require_once("config.php"); ?>
 <!doctype html>
 <html>
 
@@ -11,16 +13,16 @@
   <meta name="author" content="Umbrella Story" />
   <? $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://'; ?>
   <meta property="og:title" content="Umbrella Story - All about #umbrellaRevolution" />
-  <meta property="og:image" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>/img/og-thumb.png?12434r13" />
+  <meta property="og:image" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>/img/og-thumb.png?34234r13" />
   <meta property="og:url" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>" />
-  <meta property="og:image:url" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>/img/og-thumb.png?1323234" />
+  <meta property="og:image:url" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>/img/og-thumb.png?3545" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="300" />
   <meta property="og:image:height" content="300" />
   <meta property="og:site_name" content="Umbrella Story"/>
   <meta property="og:description" content="What's happening in Hong Kong? Do you know what is #umbrellaRevolution?" />
   <script src="/components/platform/platform.js"></script>
-  <link rel="shortcut icon" id="favicon" href="favicon.ico">
+  <link rel="shortcut icon" id="favicon" href="/favicon.ico">
   <link rel="import" href="/components/font-roboto/roboto.html">
   <link rel="import" href="/components/core-header-panel/core-header-panel.html">
   <link rel="import" href="/components/core-toolbar/core-toolbar.html">
@@ -55,12 +57,21 @@
       
       <?
         // Select default page 
+
         $url = $_SERVER['REQUEST_URI']; 
         $tokens = explode('/', $url);
-        $tab = $tokens[sizeof($tokens)-1];
+        $tab =  strtolower($tokens[sizeof($tokens)-1]);
+
+        echo $tab;
+        $url_parts = parse_url($tab);
+        $tab = $url_parts['path'];
 
         if ($tab == "") {
           $tab = "home";
+        } else if ($tab == "view") {
+          echo "yeah";
+          $show_album = true;
+          $tab = "all";
         }
       ?>
 
@@ -122,7 +133,13 @@
 
 
       </page-instagram>
-      <paper-button raised id="dynamic" class="info-btn" label="Info Kit"></paper-button>
+      <img src="/img/grey_arrow_down.png" class="get-kit-arrow"/>
+      <!-- id="dynamic" -->
+      <a href="/all"><paper-button raised class="info-btn" label="Get Kit"></paper-button></a>
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <div class="addthis_native_toolbox"></div>
+
 
   <!--Disqus-->
     <div id="disqus_thread"></div>
@@ -203,19 +220,7 @@
       var tabs = document.querySelector('paper-tabs');
       tabs.select = hashName;
     }
-
-    var imageList = <?echo $IMAGE_ZH_JSON;?>;
-
-
-    $('#dynamic').click(function(e){
-        $(this).lightGallery({
-            dynamic:true,
-            html:true,
-            mobileSrc:true,
-            dynamicEl: imageList
-        }); 
-    }) 
-  });
+    }); 
 </script>
 
   <!--Analytics-->
@@ -251,6 +256,52 @@
           })
       );
     </script>
+<polymer-element name="core-album">
+    <!-- TODO separate into standalone JS -->
+    <script>
+      var imageList = [];
+      imageList["zh-hk"] = <?echo $IMAGE_ZH_JSON ?>;
+      imageList["en"] = <?echo $IMAGE_EN_JSON ?>;
+      imageList["fr"] = <?echo $IMAGE_FR_JSON ?>;
+      imageList["de"] = <?echo $IMAGE_DE_JSON ?>;
+      imageList["da"] = <?echo $IMAGE_DA_JSON ?>;
+      imageList["th"] = <?echo $IMAGE_TH_JSON ?>;
+      imageList["es"] = <?echo $IMAGE_ES_JSON ?>;
+      imageList["jp"] = <?echo $IMAGE_JP_JSON ?>;
+
+      function openAlbumView(lang) {
+        var albumJSON = imageList[lang];
+        if (imageList[lang] == undefined) {
+          albumJSON = imageList["en"];
+        }
+        $(this).lightGallery({
+            dynamic:true,
+            html:true,
+            mobileSrc:true,
+            dynamicEl: albumJSON,
+            onOpen : function(plugin) {history.pushState(null,null,"view?lang="+lang);}, 
+            onCloseAfter  : function(plugin) {history.pushState(null,null,"all");}
+        }); 
+      }
+
+      function autoOpenAlbumView() {
+        <? if ($show_album == true){?>
+          openAlbumView("<? echo $get_lang?>");
+        <?}?>
+      }
+
+      document.addEventListener('view-tap', function(e) {
+        openAlbumView(e.detail.lang);
+      });
+
+      document.addEventListener('polymer-ready', function(e) {
+        autoOpenAlbumView("");
+      });
+
+
+
+    </script>
+</polymer-element >
 </body>
 
 </html>

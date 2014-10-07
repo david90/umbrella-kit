@@ -28,8 +28,14 @@
       background: #fff000;
       margin: 0 10px;
       font-size: 12px;
-      padding:8px;
     }
+@media (max-width: 600px) {    
+    .info-btn {
+      background: #fff000;
+      margin: 0 10px;
+      font-size: 8px;
+    }
+  }
     a {
       color: #333;
     }
@@ -46,7 +52,7 @@
       <h3>《雨傘運動懶人包》</h3>
       <p> We've prepared localized info kits for you to read and share about <code>#umbrellaRevolution</code>. 
         <br>Welcome to download PDF to print as posters. </p>
-      <template repeat="{{post in posts}}">
+      <template repeat="{{post in posts}}" attributes="lang">
         <kit-card>
           <img src="{{post.avatar}}" width="70" height="70">
           <h2>{{post.lang_name}}</h2>
@@ -55,27 +61,30 @@
             id="favicon"
             icon="file-download"
             title="Download"
-            on-tap="{{downloadTapped}}"> PDF
+            on-tap="{{PDFtapped}}"
+            hidden?="{{post.status != 'ready'}}"
+            > PDF
             </core-icon-button>
           </a>
-          <paper-input disabled multiline floatinglabel rows="fit" label="{{post.notes}}" value=""></paper-input>
+          <paper-button raised class="info-btn" label="View" hidden?="{{post.status != 'ready'}}" attributes="lang" lang="{{post.lang}}" on-tap="{{viewTapped}}"></paper-button>
+          <paper-input disabled multiline rows="fit" label="{{post.notes}}" value=""></paper-input>
 
         </kit-card>
       </template>
       <img src="/img/umbrella_at_cwb.png" style="min-width:100%" /> 
     </div>
+
+    <say-hello name="Larry"></say-hello>
+
   </template>
 
   <script>
   Polymer('kit-list', {
-    publish: {
-      favorite: {
-        value: false,
-        reflect: true
-      }
+    viewTapped: function(event, detail, sender) {
+      var kit = sender.templateInstance.model.post;
+      this.fire('view-tap', {lang: kit.lang});
     },
-    favoriteTapped: function(event, detail, sender) {
-      this.fire('download-tap');
+    PDFTapped: function(event, detail, sender) {
     }
   });
   </script>
