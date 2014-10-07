@@ -52,7 +52,19 @@
   <core-header-panel>
     <core-toolbar>
       <a href="#home" class="logo"></a>
-      <paper-tabs selected="home" valueattr="name" self-end>
+      
+      <?
+        // Select default page 
+        $url = $_SERVER['REQUEST_URI']; 
+        $tokens = explode('/', $url);
+        $tab = $tokens[sizeof($tokens)-1];
+
+        if ($tab == "") {
+          $tab = "home";
+        }
+      ?>
+
+      <paper-tabs selected="<?echo $tab;?>" valueattr="name" self-end>
         <paper-tab name="home">Home</paper-tab>
         <paper-tab name="about">About</paper-tab>
         <paper-tab name="all">Kits</paper-tab>
@@ -96,7 +108,7 @@
 
             jQuery(function($) {
               $('.instagram-umbrellaRevolution').on('willLoadInstagram', function(event, options) {
-                console.log(options);
+                // console.log(options);
               });
 
               $('.instagram-umbrellaRevolution').on('didLoadInstagram', didLoadInstagram);
@@ -142,7 +154,7 @@
     var page_instagram = document.querySelector('page-instagram');
 
     tabs.addEventListener('core-select', function() {
-      history.pushState(null,null,'#'+tabs.selected);
+      history.pushState(null,null,tabs.selected);
       if (tabs.selected == "all" || tabs.selected == "pdf") {
         list.show = tabs.selected;
         page_credits.hide = "true";
