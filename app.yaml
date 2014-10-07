@@ -35,6 +35,9 @@ handlers:
 - url: /outdatedbrowser/
   static_dir: outdatedbrowser/
 
+- url: /assets/
+  static_dir: assets/
+
 # Scripts
 
 - url: /kit-list.html

@@ -34,14 +34,15 @@
   <link rel="import" href="/page-about.html">
   <link rel="import" href="/page-credits.html">
   <link rel="import" href="/page-embed-imgur.html">
-  <!-- <link rel="import" href="/page-instagram.html"> -->
   <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/assets/stylesheets/arthref.css">
   <!--plugin-->
   <link type="text/css" rel="stylesheet" href="/stylesheets/lightGallery.css" />
   <link rel="stylesheet" href="/outdatedbrowser/outdatedBrowser.min.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-instagram/0.3.1/instagram.min.js"></script>
   <script src="/js/lightGallery.min.js"></script>
+  <script src="/assets/javascripts/socialShare.js"></script>
   <script src="/outdatedbrowser/outdatedBrowser.min.js"></script>
 </head>
 
@@ -138,7 +139,7 @@
       <a href="/all"><paper-button raised class="info-btn" label="Get Kit"></paper-button></a>
 
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
-  <div class="addthis_native_toolbox"></div>
+  <!-- <div class="addthis_native_toolbox"></div> -->
 
 
   <!--Disqus-->
@@ -222,6 +223,7 @@
     }
     }); 
 </script>
+  <div class="share"></div>
 
   <!--Analytics-->
   <script>
@@ -255,8 +257,16 @@
               lowerThan: 'transform'
           })
       );
+          
+      function socialShare(customURL){
+        shareSingleton = $('.share').socialShare({
+          shareUrl: customURL,
+          animation: 'launchpad', // launchpad, launchpadReverse, slideTop, slideRight, slideBottom, slideLeft, chain
+          "social": "blogger,delicious,digg,facebook,friendfeed,google,linkedin,myspace,pinterest,reddit,stumbleupon,tumblr,twitter,windows,yahoo"
+        }); 
+      }
     </script>
-<polymer-element name="core-album">
+
     <!-- TODO separate into standalone JS -->
     <script>
       var imageList = [];
@@ -298,10 +308,14 @@
         autoOpenAlbumView("");
       });
 
-
+      document.addEventListener('share-tap', function(e) {
+        var customURL = "<? echo $protocol . $_SERVER['HTTP_HOST']; ?>/view?lang="+e.detail.lang+"";
+        socialShare(customURL);
+        $(".share").click();
+      });
 
     </script>
-</polymer-element >
+  </template>
 </body>
 
 </html>
