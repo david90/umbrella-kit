@@ -62,14 +62,13 @@
         $tokens = explode('/', $url);
         $tab =  strtolower($tokens[sizeof($tokens)-1]);
 
-        echo $tab;
         $url_parts = parse_url($tab);
         $tab = $url_parts['path'];
 
         if ($tab == "") {
           $tab = "home";
         } else if ($tab == "view") {
-          echo "yeah";
+          // Handle Show album
           $show_album = true;
           $tab = "all";
         }
