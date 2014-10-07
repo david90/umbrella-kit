@@ -2,9 +2,14 @@
 $FILE_KEY = $_SERVER['REQUEST_URI'];
 
 // PDF_FILES DICTIONARY
-$PDF_SETS["/pdf/zh-hk"]='http://bit.ly/umbrella-story-ZH-2014-10-06-0216';
-$PDF_SETS["/pdf/en"]='http://bit.ly/umbrella-story-EN-2014-10-05-2317';
-$PDF_SETS["/pdf/fr"]='http://bit.ly/umbrella-story-FR-2014-10-06-0002';
+$PDF_SETS["/pdf/zh-hk"]='https://bitly.com/umbrella-story-ZH-autoexport';
+$PDF_SETS["/pdf/en"]='https://bitly.com/umbrella-story-EN-autoexport';
+$PDF_SETS["/pdf/fr"]='https://bitly.com/umbrella-story-FR-autoexport';
+$PDF_SETS["/pdf/jp"]='https://bitly.com/umbrella-story-JP-autoexport';
+$PDF_SETS["/pdf/da"]='https://bitly.com/umbrella-story-DA-autoexport';
+$PDF_SETS["/pdf/kr"]='https://bitly.com/umbrella-story-KR-autoexport';
+$PDF_SETS["/pdf/es"]='https://bitly.com/umbrella-story-ES-autoexport';
+$PDF_SETS["/pdf/de"]='https://bitly.com/umbrella-story-DE-autoexport';
 
 if (array_key_exists($FILE_KEY, $PDF_SETS)) {
   $redirectURL = $PDF_SETS[$FILE_KEY];
