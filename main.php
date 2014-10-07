@@ -132,6 +132,7 @@
 
 
       </page-instagram>
+      <img src="/img/umbrella_at_cwb.png" style="max-width:100%;width:650px" />
       <img src="/img/grey_arrow_down.png" class="get-kit-arrow"/>
       <!-- id="dynamic" -->
       <a href="/all"><paper-button raised class="info-btn" label="Get Kit"></paper-button></a>
