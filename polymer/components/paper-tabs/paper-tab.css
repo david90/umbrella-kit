@@ -40,10 +40,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   color: #ffff8d;
 }
 
-.blue-ink #ink {
-  color: #2980b9;
-}
-
 :host[noink] #ink {
   pointer-events: none;
 }
