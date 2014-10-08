@@ -61,6 +61,33 @@ handlers:
 - url: /pdf/.*
   script: redirect_pdf.php
 
+# Languages
+- url: /en/.*
+  script: main.php
+
+- url: /zh-hk/.*
+  script: main.php
+
+- url: /jp/.*
+  script: main.php
+
+- url: /fr/.*
+  script: main.php
+
+- url: /kr/.*
+  script: main.php
+
+- url: /de/.*
+  script: main.php
+
+- url: /da/.*
+  script: main.php
+
+- url: /es/.*
+  script: main.php
+
+# End Languages
+
 - url: /view
   script: main.php
 

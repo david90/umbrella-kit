@@ -5,7 +5,7 @@
     "lang_name":"中文 (Chinese)",
     "avatar" : "/img/lang/flag_rotate-hk.png",
     "pdf_url":"/pdf/zh-hk",
-    "notes":"Ready",
+    "notes":"由罷課抗爭到「雨傘運動」、由胡椒噴霧到 87 枚催淚彈，學生和市民連日來持續佔領香港街頭，到底他們在爭取甚麼？《雨傘故事》的誕生，是希望讓大家認識雨傘運動的緣起。",
     "status":"ready"
   },
   {
@@ -15,7 +15,7 @@
     "avatar" : "/img/lang/flag_rotate-en.png",
     "pdf_url":"/pdf/en",
     "status":"ready",
-    "notes":"Ready"
+    "notes":"From class boycott to \"Umbrella Revolution\", from pepper spray to tear gas - Hong Kong protestors continue occupying streets. What are they exactly fighting for? The \"Umbrella Story\" is now born to state why the umbrella revolution outbreaks."
   },
   {
     "uid": 3,
@@ -24,7 +24,7 @@
     "avatar" : "/img/lang/flag_rotate-fr.png",
     "pdf_url":"/pdf/fr",
     "status":"ready",
-    "notes":"Ready"
+    "notes":"Que se passe-t-il à Hong Kong?"
   },
   {
     "uid": 4,
@@ -52,5 +52,32 @@
     "pdf_url":"/pdf/kr",
     "status":"waiting",
     "notes":"Waiting for Proof-read"
+  },
+  {
+    "uid": 6,
+    "lang":"de",
+    "lang_name":"Deutsch (German)",
+    "avatar" : "/img/lang/flag_rotate-de.png",
+    "pdf_url":"/pdf/de",
+    "status":"waiting",
+    "notes":"Translation in progress"
+  },
+  {
+    "uid": 7,
+    "lang":"es",
+    "lang_name":"Español (Spanish)",
+    "avatar" : "/img/lang/flag_rotate-es.png",
+    "pdf_url":"/pdf/es",
+    "status":"waiting",
+    "notes":"Translation in progress"
+  },
+  {
+    "uid": 0,
+    "lang":"none",
+    "lang_name":"More languages",
+    "avatar" : "/img/lang/flag_rotate-world.png",
+    "pdf_url":"/pdf/none",
+    "status":"waiting",
+    "notes":"We welcome your contribution! \n\nIf you want to help localizing this Info kit to any language you master. \nPlease contact us translate@umbrellastory.hk "
   }
 ]
