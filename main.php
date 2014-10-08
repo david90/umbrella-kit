@@ -80,7 +80,7 @@
         <paper-tab name="about">About</paper-tab>
         <paper-tab name="all">Kits</paper-tab>
         <paper-tab name="instagram">#UR</paper-tab>
-        <paper-tab name="credits">Credits</paper-tab>
+        <!-- <paper-tab name="credits">Credits</paper-tab> -->
       </paper-tabs>
     </core-toolbar>
     <div class="container" layout vertical center>
@@ -136,7 +136,7 @@
       <div class="umbrella-at-cwb" ></div>
       <img src="/img/grey_arrow_down.png" class="get-kit-arrow"/>
       <!-- id="dynamic" -->
-      <a href="/all"><paper-button raised class="info-btn" label="Get Kit"></paper-button></a>
+      <a href="/all"><paper-button raised class="info-btn">Get Kit</paper-button></a>
 
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <!-- <div class="addthis_native_toolbox"></div> -->

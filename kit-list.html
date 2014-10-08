@@ -85,9 +85,9 @@
             > PDF
             </core-icon-button>
           </a>
-          <paper-button raised class="info-btn" label="View" hidden?="{{post.status != 'ready'}}" attributes="lang" lang="{{post.lang}}" on-tap="{{viewTapped}}"></paper-button>
+          <paper-button raised class="info-btn" hidden?="{{post.status != 'ready'}}" attributes="lang" lang="{{post.lang}}" on-tap="{{viewTapped}}">View</paper-button>
           <p class="notes">{{post.notes}}</p>
-          <paper-button raised label="Share" hidden?="{{post.status != 'ready'}}" class="share-btn" attributes="lang" lang="{{post.lang}}" on-tap="{{shareTapped}}"></paper-button>
+          <paper-button raised hidden?="{{post.status != 'ready'}}" class="share-btn" attributes="lang" lang="{{post.lang}}" on-tap="{{shareTapped}}">Share</paper-button>
         </kit-card>
       </template>
     </div>
