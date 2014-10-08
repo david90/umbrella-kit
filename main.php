@@ -80,7 +80,7 @@
         <paper-tab name="about">About</paper-tab>
         <paper-tab name="all">Kits</paper-tab>
         <paper-tab name="instagram">#UR</paper-tab>
-        <!-- <paper-tab name="credits">Credits</paper-tab> -->
+        <paper-tab name="credits">Credits</paper-tab>
       </paper-tabs>
     </core-toolbar>
     <div class="container" layout vertical center>
