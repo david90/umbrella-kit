@@ -32,8 +32,8 @@
     "lang_name":"Dansk (Danish)",
     "avatar" : "/img/lang/flag_rotate-da.png",
     "pdf_url":"/pdf/da",
-    "status":"waiting",
-    "notes":"Waiting for typesetting"
+    "status":"ready",
+    "notes":"Umbrella Story - All about #umbrellaRevolution"
   },
   {
     "uid": 5,
@@ -41,8 +41,8 @@
     "lang_name":"日本語 (Japan)",
     "avatar" : "/img/lang/flag_rotate-jp.png",
     "pdf_url":"/pdf/jp",
-    "status":"waiting",
-    "notes":"Waiting for typesetting"
+    "status":"ready",
+    "notes":"傘の革命の物語 - #umbrellaRevolution の全て"
   },
   {
     "uid": 5,

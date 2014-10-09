@@ -7,9 +7,11 @@
   $tokens = explode('/', $url);
   $tab =  strtolower($tokens[sizeof($tokens)-1]);
   $url_parts = parse_url($tab);
-  $tab = $url_parts['path'];
+
+  if (isset($url_parts['path']))
+    $tab = $url_parts['path'];
   
-  if ($tab == "") {
+  if (!isset($tab) || $tab == "") {
     $tab = "home";
   } else if ($tab == "view") {
     // Handle Show album
@@ -22,20 +24,20 @@
 ?>
 
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <title>Umbrella Story - All about #umbrellaRevolution</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="keywords" content="hong kong, hk, democracy, oclp, umbrella revolution, umbrellarevolution" />
-  <meta property="og:type" content="website">
+  
   <meta name="author" content="Umbrella Story" />
   <? $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://'; ?>
 
   <meta property="og:url" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>" />
-  <meta property="og:type" content="website" />
+  
   <?php 
-    $s_metafile = 'meta/' . $_GET['fb_locale'] . '_meta.php';
+    $s_metafile = 'meta/' . (isset($_GET['fb_locale']) ? $_GET['fb_locale'] : '') . '_meta.php';
     if (file_exists($s_metafile))
       include($s_metafile);
     else
@@ -84,6 +86,13 @@
         <paper-tab name="credits">Credits</paper-tab>
       </paper-tabs>
     </core-toolbar>
+    <div style='float: right'>
+      <a href='/zh-hk/home'>繁中</a>
+      <a href='/en/home'>English</a>
+      <a href='/fr/home'>Français</a>
+      <a href='/da/home'>Dansk</a>
+      <a href='/jp/home'>日本語</a>
+    </div>
     <div class="container" layout vertical center>
       <kit-list show="all"></kit-list>
       <page-about hide="true"></page-about>
@@ -300,7 +309,7 @@
       }
 
       function autoOpenAlbumView() {
-        <? if ($show_album == true){?>
+        <? if (isset($show_album) && $show_album == true){?>
           openAlbumView("<? echo $get_lang?>");
         <?}?>
       }

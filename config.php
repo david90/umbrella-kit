@@ -8,7 +8,7 @@ function is_permitted_lang($test_lang) {
     return in_array($test_lang, $PERMITTED_LANG);
 }
 
-$IMAGE_URL_PREFIX = 'https://dfg63nb4d89j7.cloudfront.net/';
+$IMAGE_URL_PREFIX = 'https://s3-ap-southeast-1.amazonaws.com/umbrellastory/';
 
 $IMAGE_ZH_JSON = generate_image_json($IMAGE_URL_PREFIX, "zh-hk", 28);
 $IMAGE_EN_JSON = generate_image_json($IMAGE_URL_PREFIX, "en", 28);
@@ -22,7 +22,11 @@ $IMAGE_JP_JSON = generate_image_json($IMAGE_URL_PREFIX, "jp", 28);
 
 function generate_image_json ($prefix_url, $lang ,$count) {
 
-    $result_json .= '[';
+    if (isset($result_json))
+        $result_json .= '[';
+    else 
+        $result_json = '[';
+    
     for ($i = 1; $i<=$count; $i++) {
         $result_json .= '{';
         $result_json .= '"src":"'.$prefix_url.$lang.'/md/'.$i.'.png",';
