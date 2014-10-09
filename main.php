@@ -223,7 +223,7 @@
 
       var container =document.querySelector('.container');
       if (container != null) {
-        container.scrollIntoViewIfNeeded(container);
+        container.scrollIntoView(container);
         container = null;
       }
 
