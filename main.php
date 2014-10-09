@@ -211,6 +211,12 @@
         list.show = "none";
       }
 
+      var container =document.querySelector('.container');
+      if (container != null) {
+        container.scrollIntoViewIfNeeded(container);
+        container = null;
+      }
+
     });
   </script>
   <!--Addthis-->
