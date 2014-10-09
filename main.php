@@ -86,14 +86,14 @@
         <paper-tab name="credits">Credits</paper-tab>
       </paper-tabs>
     </core-toolbar>
-    <div style='float: right'>
-      <a href='/zh-hk/home'>繁中</a>
-      <a href='/en/home'>English</a>
-      <a href='/fr/home'>Français</a>
-      <a href='/da/home'>Dansk</a>
-      <a href='/jp/home'>日本語</a>
-    </div>
     <div class="container" layout vertical center>
+      <div class="lang-switch">
+        <a href='/zh-hk/'>繁中</a>
+        <a href='/en/'>English</a>
+        <a href='/fr/'>Français</a>
+        <a href='/da/'>Dansk</a>
+        <a href='/jp/'>日本語</a>
+      </div>
       <kit-list show="all"></kit-list>
       <page-about hide="true"></page-about>
       <page-credits hide="true"></page-credits>

@@ -44,6 +44,39 @@
       width: 186px;
     }
   }
+  .lang-switch {
+    text-align: right;
+    width:300px;
+    min-width: 100%;
+    margin-bottom:10px;
+    margin-top: 0px;
+    float: right;
+    position: absolute
+    right: 0;
+    font-size : 12px;
+
+  }
+
+  .lang-switch a {
+    line-height: 20px;
+    padding: 10px;
+    background: #1a1c25;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+  }
+  @media (max-width: 600px) {
+
+  .lang-switch {
+      max-width:300px;
+      font-size : 10px;
+    }
+    .lang-switch a {
+      line-height: 18px;
+      padding: 8px;
+    }
+  }
+
   .info-btn {
     background: #fff000;
   }
