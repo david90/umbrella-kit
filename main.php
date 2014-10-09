@@ -143,10 +143,10 @@
 
 
       </page-instagram>
-      <img src="/img/umbrella_at_cwb.png" style="max-width:100%;width:650px" />
+      <div class="umbrella-at-cwb" ></div>
       <img src="/img/grey_arrow_down.png" class="get-kit-arrow"/>
       <!-- id="dynamic" -->
-      <a href="/all"><paper-button raised class="info-btn" label="Get Kit"></paper-button></a>
+      <a href="/all"><paper-button raised class="info-btn">Get Kit</paper-button></a>
 
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <!-- <div class="addthis_native_toolbox"></div> -->
@@ -219,6 +219,12 @@
         page_embed_imgur.hide = "true";
         $(page_instagram).removeAttr("hidden");
         list.show = "none";
+      }
+
+      var container =document.querySelector('.container');
+      if (container != null) {
+        container.scrollIntoViewIfNeeded(container);
+        container = null;
       }
 
     });
