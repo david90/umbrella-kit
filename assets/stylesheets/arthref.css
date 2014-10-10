@@ -201,7 +201,7 @@
 .arthref .icon-container ul li a.aDribbble, .arthref .icon-container ul li a.aDribble{ background-color: #ff0084; }
 .arthref .icon-container ul li a.aInstagram{ background-color: #723f2d; }
 
-.arthref .icon-container ul li a span{ display: block; width: 80px; height: 80px; background: url('../images/social-sprite.png') no-repeat; }
+.arthref .icon-container ul li a span{ display: block; width: 80px; height: 80px; background: url('/assets/images/social-sprite.png') no-repeat; }
 
 .arthref .icon-container ul li a{
 	background-image: -webkit-radial-gradient(center center, 80px 80px, rgba(255,255,255,.15) 0%, rgba(0,0,0,.15) 100%);
