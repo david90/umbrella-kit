@@ -38,6 +38,9 @@ handlers:
 - url: /assets/
   static_dir: assets/
 
+- url: /locale/
+  static_dir: locale/  
+
 # Scripts
 
 - url: /kit-list.html
@@ -90,6 +93,9 @@ handlers:
 
 - url: /view
   script: main.php
+
+- url: /lang.php
+  script: lang.php
 
 - url: /config.php
   script: config.php

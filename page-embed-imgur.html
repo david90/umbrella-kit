@@ -1,4 +1,4 @@
-<polymer-element name="page-embed-imgur" attributes="hide preferred_lang" preferred_lang="en">
+<polymer-element name="page-embed-imgur" attributes="hide preferred_lang embed_caption_h3 embed_caption_text_1 embed_caption_text_2 localeJSON" preferred_lang="en">
   <template>
     <style>
     :host {
@@ -11,13 +11,13 @@
     }
     </style>
     <div layout vertical center hidden?="{{hide == 'true'}}">
-<a href="https://dfg63nb4d89j7.cloudfront.net/{{preferred_lang}}/md/combined.jpg" title="What's happening in Hong Kong?"><img src="https://dfg63nb4d89j7.cloudfront.net/{{preferred_lang}}/md/combined.jpg" alt="What's happening in Hong Kong?" title="What's happening in Hong Kong?" class="combine-img" /></a>
-  <p>
-    <h3>Get info kits</h3>
-    You can get info kits in different languages in KIT section.<br>
-    Please share to your friends what's happening in Hong Kong!
-  </p>
-
+    <a href="https://dfg63nb4d89j7.cloudfront.net/{{preferred_lang}}/md/combined.jpg" title="What's happening in Hong Kong?"><img src="https://dfg63nb4d89j7.cloudfront.net/{{preferred_lang}}/md/combined.jpg" alt="What's happening in Hong Kong?" title="What's happening in Hong Kong?" class="combine-img" /></a>
+    
+    <h3>{{embed_caption_h3}}</h3>
+    <p>{{embed_caption_text_1}}
+      <br/>
+    {{embed_caption_text_2}}
+    </p>
   </div>
   </template>
   <script>

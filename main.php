@@ -21,6 +21,8 @@
 
   // Handle Preferred language
   $preferred_lang =  strtolower($tokens[sizeof($tokens)-2]);
+
+  require_once ("lang.php");
 ?>
 
 <!doctype html>
@@ -37,6 +39,8 @@
   <meta property="og:url" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>" />
   
   <?php 
+
+    // TODO, handle this in locale too
     $s_metafile = 'meta/' . (isset($_GET['fb_locale']) ? $_GET['fb_locale'] : '') . '_meta.php';
     if (file_exists($s_metafile))
       include($s_metafile);
@@ -97,7 +101,12 @@
       <kit-list show="all"></kit-list>
       <page-about hide="true"></page-about>
       <page-credits hide="true"></page-credits>
-      <page-embed-imgur hide="true"></page-embed-imgur>
+      <page-embed-imgur hide="true" 
+        embed_caption_h3="<?=LOCALE("embed_caption_h3");?>"
+        embed_caption_text_1="<?=LOCALE("embed_caption_text_1");?>"
+        embed_caption_text_2="<?=LOCALE("embed_caption_text_2");?>"
+        >
+        </page-embed-imgur>
       <page-instagram hidden="true">
       <h1>Latest <code>#umbrellaRevolution</code> on Instagram</h1>
       <div class="instagram instagram-umbrellaRevolution"></div>
@@ -149,7 +158,7 @@
       <a href="/all"><paper-button raised class="info-btn">Get Kit</paper-button></a>
 
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
-  <!-- <div class="addthis_native_toolbox"></div> -->
+  <div class="addthis_native_toolbox"></div>
 
 
   <!--Disqus-->
@@ -290,14 +299,14 @@
     <!-- TODO separate into standalone JS -->
     <script>
       var imageList = [];
-      imageList["zh-hk"] = <?echo $IMAGE_ZH_JSON ?>;
-      imageList["en"] = <?echo $IMAGE_EN_JSON ?>;
-      imageList["fr"] = <?echo $IMAGE_FR_JSON ?>;
-      imageList["de"] = <?echo $IMAGE_DE_JSON ?>;
-      imageList["da"] = <?echo $IMAGE_DA_JSON ?>;
-      imageList["th"] = <?echo $IMAGE_TH_JSON ?>;
-      imageList["es"] = <?echo $IMAGE_ES_JSON ?>;
-      imageList["jp"] = <?echo $IMAGE_JP_JSON ?>;
+      imageList["zh-hk"] = <?=$IMAGE_ZH_JSON ?>;
+      imageList["en"] = <?=$IMAGE_EN_JSON ?>;
+      imageList["fr"] = <?=$IMAGE_FR_JSON ?>;
+      imageList["de"] = <?=$IMAGE_DE_JSON ?>;
+      imageList["da"] = <?=$IMAGE_DA_JSON ?>;
+      imageList["th"] = <?=$IMAGE_TH_JSON ?>;
+      imageList["es"] = <?=$IMAGE_ES_JSON ?>;
+      imageList["jp"] = <?=$IMAGE_JP_JSON ?>;
 
       function openAlbumView(lang) {
         var albumJSON = imageList[lang];
