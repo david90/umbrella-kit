@@ -2,7 +2,8 @@
   @$get_lang = $_GET["lang"];
  require_once("config.php"); 
 
-  // Select default page 
+  // page parameters
+  $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
   $url = $_SERVER['REQUEST_URI']; 
   $tokens = explode('/', $url);
   $tab =  strtolower($tokens[sizeof($tokens)-1]);
@@ -21,7 +22,7 @@
 
   // Handle Preferred language
   $preferred_lang =  strtolower($tokens[sizeof($tokens)-2]);
-
+  // The language localization helper
   require_once ("lang.php");
 ?>
 
@@ -32,10 +33,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="keywords" content="hong kong, hk, democracy, oclp, umbrella revolution, umbrellarevolution" />
-  
   <meta name="author" content="Umbrella Story" />
-  <? $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://'; ?>
-
   <meta property="og:url" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>" />
   
   <?php 
@@ -156,7 +154,7 @@
       <img src="/img/grey_arrow_down.png" class="get-kit-arrow"/>
       <!-- id="dynamic" -->
       <a href="/all"><paper-button raised class="info-btn">Get Kit</paper-button></a>
-
+      <br />
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <div class="addthis_native_toolbox"></div>
 
