@@ -25,6 +25,19 @@ if (file_exists($s_localefile)) {
 
 // Helper function
 
+function META_TAGS_LOCALE($key) {
+  $meta_tags_array["en"] = "meta/en_US_meta.php";
+  $meta_tags_array["fr"] = "meta/fr_FR_meta.php";
+  $meta_tags_array["jp"] = "meta/ja_JP_meta.php";
+  $meta_tags_array["zh-hk"] = "meta/zh_HK_meta.php";
+
+  if (array_key_exists($key, $meta_tags_array)) {
+    return $meta_tags_array[$key];
+  } else {
+    return "meta/en_US_meta.php";
+  }
+}
+
 function LOCALE($key) {
   global $localized_string;
   if (isset($localized_string)) {
@@ -45,4 +58,7 @@ function LOCALE($key) {
     return ""; // sorry ~ cannot find localized file
   }
 }
+
+
+
 ?>

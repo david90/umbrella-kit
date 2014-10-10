@@ -1,5 +1,6 @@
 <?
   @$get_lang = $_GET["lang"];
+  @$get_fb_locale = $_GET["fb_locale"];
  require_once("config.php"); 
 
   // page parameters
@@ -27,25 +28,30 @@
 ?>
 
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <title>Umbrella Story - All about #umbrellaRevolution</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="keywords" content="hong kong, hk, democracy, oclp, umbrella revolution, umbrellarevolution" />
   <meta name="author" content="Umbrella Story" />
-  <meta property="og:url" content="<? echo $protocol . $_SERVER['HTTP_HOST']; ?>" />
+
+  <meta property="og:url" content="<? echo $protocol . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" />
   
   <?php 
-
     // TODO, handle this in locale too
-    $s_metafile = 'meta/' . (isset($_GET['fb_locale']) ? $_GET['fb_locale'] : '') . '_meta.php';
-    if (file_exists($s_metafile))
-      include($s_metafile);
-    else
-      include('meta/en_US_meta.php');
+    if (isset($_GET["locale"])) {
+      $s_metafile = 'meta/' .$_GET['locale'] . '_meta.php';
+      if (file_exists($s_metafile))
+        include($s_metafile);
+      else
+        include('meta/en_US_meta.php');
+    } else {
+      include(META_TAGS_LOCALE($preferred_lang));
+    }
   ?>
 
+  <meta property="og:type" content="website" />
   <script src="/components/platform/platform.js"></script>
   <link rel="shortcut icon" id="favicon" href="/favicon.ico">
   <link rel="import" href="/components/font-roboto/roboto.html">
@@ -155,10 +161,8 @@
       <!-- id="dynamic" -->
       <a href="/all"><paper-button raised class="info-btn">Get Kit</paper-button></a>
       <br />
-  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <!-- Like box-->
   <div class="addthis_native_toolbox"></div>
-
-
   <!--Disqus-->
     <div id="disqus_thread"></div>
     <script type="text/javascript">
