@@ -10,4 +10,4 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:site_name" content="Umbrella Story - All about #umbrellaRevolution"/>
-<!-- <meta property="og:description" content='FFrom class boycott to "Umbrella Revolution", from pepper spray to tear gas - Hong Kong protestors continue occupying streets. What are they exactly fighting for? The "Umbrella Story" is now born to state why umbrella revolution outbreaks.' /> -->
+<!-- <meta property="og:description" content='From class boycott to "Umbrella Revolution", from pepper spray to tear gas - Hong Kong protestors continue occupying streets. What are they exactly fighting for? The "Umbrella Story" is now born to state why umbrella revolution outbreaks.' /> -->
