@@ -38,8 +38,7 @@ handlers:
 - url: /assets/
   static_dir: assets/
 
-- url: /locale/
-  static_dir: locale/  
+
 
 # Scripts
 
@@ -63,6 +62,7 @@ handlers:
 
 - url: /pdf/.*
   script: redirect_pdf.php
+
 
 # Languages
 - url: /en/.*

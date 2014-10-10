@@ -3,15 +3,15 @@
 $DEFAULT_LOCALE_FLIE = 'locale/en.php';
 
 // include defalt and cahc it first
-  require_once ($DEFAULT_LOCALE_FLIE);
+  include ($DEFAULT_LOCALE_FLIE);
   $default_localize_string = $localized_string;
 
 
 $s_localefile = 'locale/' . $preferred_lang. '.php';
 if (file_exists($s_localefile)) {
-  require_once ($s_localefile);
+  include ($s_localefile);
 } else {
-  require_once ($DEFAULT_LOCALE_FLIE);
+  include ($DEFAULT_LOCALE_FLIE);
 }
 
 // Include preferred string array
@@ -20,7 +20,7 @@ if (file_exists($s_localefile)) {
 
 function LOCALE($key) {
   global $localized_string;
-  if (isset($localized_string) && array_key_exists($key, $localized_string)) {
+  if (isset($localized_string)) {
 
       if (array_key_exists($key, $localized_string)) {
         // successful find a localized string
