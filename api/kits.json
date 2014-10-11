@@ -72,6 +72,15 @@
     "notes":"Translation in progress, please contact us at info@umbrellastory.hk if you counld help."
   },
   {
+    "uid": 8,
+    "lang":"vi",
+    "lang_name":"Việt (Vietnamese)",
+    "avatar" : "/img/lang/flag_rotate-vi.png",
+    "pdf_url":"/pdf/vi",
+    "status":"waiting",
+    "notes":"Translation in progress, please contact us at info@umbrellastory.hk if you counld help."
+  },
+  {
     "uid": 0,
     "lang":"none",
     "lang_name":"More languages",
