@@ -51,7 +51,7 @@
     "avatar" : "/img/lang/flag_rotate-kr.png",
     "pdf_url":"/pdf/kr",
     "status":"waiting",
-    "notes":"Waiting for Proof-read"
+    "notes":"Waiting for Proof-read, please contact us at info@umbrellastory.hkif you could help."
   },
   {
     "uid": 6,
@@ -60,7 +60,7 @@
     "avatar" : "/img/lang/flag_rotate-de.png",
     "pdf_url":"/pdf/de",
     "status":"waiting",
-    "notes":"Translation in progress"
+    "notes":"Waiting for Proof-read, please contact us at info@umbrellastory.hk if you could help."
   },
   {
     "uid": 7,
@@ -69,7 +69,7 @@
     "avatar" : "/img/lang/flag_rotate-es.png",
     "pdf_url":"/pdf/es",
     "status":"waiting",
-    "notes":"Translation in progress"
+    "notes":"Translation in progress, please contact us at info@umbrellastory.hk if you counld help."
   },
   {
     "uid": 0,
