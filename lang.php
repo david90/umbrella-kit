@@ -30,6 +30,7 @@ function META_TAGS_LOCALE($key) {
   $meta_tags_array["fr"] = "meta/fr_FR_meta.php";
   $meta_tags_array["jp"] = "meta/ja_JP_meta.php";
   $meta_tags_array["zh-hk"] = "meta/zh_HK_meta.php";
+  $meta_tags_array["kr"] = "meta/kr_KR_meta.php";
 
   if (array_key_exists($key, $meta_tags_array)) {
     return $meta_tags_array[$key];
