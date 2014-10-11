@@ -81,6 +81,15 @@
     "notes":"Translation in progress, please contact us at info@umbrellastory.hk if you counld help."
   },
   {
+    "uid": 9,
+    "lang":"th",
+    "lang_name":"ไทย (Thai)",
+    "avatar" : "/img/lang/flag_rotate-th.png",
+    "pdf_url":"/pdf/th",
+    "status":"waiting",
+    "notes":"Waiting for translation, please contact us at info@umbrellastory.hk if you counld help."
+  },
+  {
     "uid": 0,
     "lang":"none",
     "lang_name":"More languages",
