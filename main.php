@@ -101,6 +101,7 @@
         <a href='/fr/'>Français</a>
         <a href='/da/'>Dansk</a>
         <a href='/jp/'>日本語</a>
+        <a href='/kr/'>한국어</a>
       </div>
       <kit-list show="all"></kit-list>
       <page-about hide="true"></page-about>
