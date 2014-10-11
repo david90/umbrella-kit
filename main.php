@@ -310,6 +310,8 @@
       imageList["th"] = <?=$IMAGE_TH_JSON ?>;
       imageList["es"] = <?=$IMAGE_ES_JSON ?>;
       imageList["jp"] = <?=$IMAGE_JP_JSON ?>;
+      imageList["kr"] = <?=$IMAGE_KR_JSON ?>;
+
 
       function openAlbumView(lang) {
         var albumJSON = imageList[lang];

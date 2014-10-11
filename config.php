@@ -1,7 +1,7 @@
 <?
 // Put down all configs in the file.
 
-$PERMITTED_LANG = array("zh-hk","en","fr","de","da","th","es","jp");
+$PERMITTED_LANG = array("zh-hk","en","fr","de","da","th","es","jp","kr");
 
 function is_permitted_lang($test_lang) {
     global $PERMITTED_LANG;
@@ -18,6 +18,7 @@ $IMAGE_DA_JSON = generate_image_json($IMAGE_URL_PREFIX, "da", 28);
 $IMAGE_TH_JSON = generate_image_json($IMAGE_URL_PREFIX, "th", 28);
 $IMAGE_ES_JSON = generate_image_json($IMAGE_URL_PREFIX, "es", 28);
 $IMAGE_JP_JSON = generate_image_json($IMAGE_URL_PREFIX, "jp", 28);
+$IMAGE_KR_JSON = generate_image_json($IMAGE_URL_PREFIX, "kr", 28);
 
 
 function generate_image_json ($prefix_url, $lang ,$count) {
