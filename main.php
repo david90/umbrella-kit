@@ -203,6 +203,10 @@
         page_about.hide = "true";
       }
       else if (tabs.selected == "about") {
+        <? if(!has_about_lang($preferred_lang)){ 
+          $preferred_lang = "en";
+         } ?>
+        page_about.preferred_lang = "<?echo $preferred_lang; ?>";
         page_about.hide = "false";
         page_credits.hide = "true";
         page_embed_imgur.hide = "true";

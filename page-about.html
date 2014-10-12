@@ -1,4 +1,4 @@
-<polymer-element name="page-about" attributes="hide">
+<polymer-element name="page-about" attributes="hide preferred_lang" preferred_lang="en">
   <template>
     <style>
   /*About page*/
@@ -25,47 +25,122 @@
       <div class="header-banner-about"></div>
       <h1>About</h1>
       <div class="about-text">
-      <p>
-        <h2>《雨傘運動懶人包》</h2> 由開始集會，發展到「雨傘運動」；由胡椒噴霧，到出動催淚彈；由萬眾一心，走到街上，到爭論「佔 or not 佔、撤or not 撤」。<br/>
-      <b>BUT,THAT'S NOT THE QUESTION. </b>
-      </p>
+        <template bind if="{{preferred_lang == 'zh-hk'}}">
+        <!-- ZH-HK -->
+        <p>
+          <h2>《雨傘運動懶人包》</h2> 由開始集會，發展到「雨傘運動」；由胡椒噴霧，到出動催淚彈；由萬眾一心，走到街上，到爭論「佔 or not 佔、撤or not 撤」。<br/>
+        <b>BUT,THAT'S NOT THE QUESTION. </b>
+        </p>
 
-      <p>
-      走到這裡，也許感到都累了、泄氣了、失焦了。<br />
-      這懶人包讓大家回顧「雨傘運動」本來是為了甚麼。
-      </p>
-      <p>
-      如果，你對金鐘、銅鑼灣、旺角的佔領者所提出的訴求，本身認識不深，<br />
-      質疑他們為甚麼要用一個「影響香港」的方法去抗爭的話，<br />
-      你也可以讀一讀這懶人包，想一想背後有甚麼原因。<br />
-      </p>
-      <hr />
-      <p>
-      一切，要由《基本法》說起。<br />
-      </p><p>
-      從 1997 年香港主權由英國移交至中國起，《基本法》確立香港特別行政區實行高度自治，第 45 及 68 條承諾香港的行政長官最終由普選產生。<br />
-      </p><p>
-      現時香港行政長官由代表性不足的選舉委員會選出。全國人大常委會在 2014 年 8 月作出決定，規定最終競逐普選的候選人必需通過篩選，而負責篩選的提名委員會的組成方式，正正與現時的選舉委員會相同。<br />
-      </p><p>
-      人大的的決定僅實現了公民投票權，卻為公民參選權設下不合理的限制。
-      </p><p>
-      社會各界對政府詮釋「普選」的方法感到詫異，希望政府和撤回這個不合理的「假普選」方案，然而政府漠視社會的不滿聲音，繼續誘使市民「袋住先」。
-      </p><p>
-      2014 年 9 月 22 日，香港學生專上聯會發起罷課。事件觸發群眾在政府總部外集會，支援學生運動。本來和平的集會，在警察的武力驅散下演變成街頭佔領。
-      </p><p>
+        <p>
+        走到這裡，也許感到都累了、泄氣了、失焦了。<br />
+        這懶人包讓大家回顧「雨傘運動」本來是為了甚麼。
+        </p>
+        <p>
+        如果，你對金鐘、銅鑼灣、旺角的佔領者所提出的訴求，本身認識不深，<br />
+        質疑他們為甚麼要用一個「影響香港」的方法去抗爭的話，<br />
+        你也可以讀一讀這懶人包，想一想背後有甚麼原因。<br />
+        </p>
+        <hr />
+        <p>
+        一切，要由《基本法》說起。<br />
+        </p><p>
+        從 1997 年香港主權由英國移交至中國起，《基本法》確立香港特別行政區實行高度自治，第 45 及 68 條承諾香港的行政長官最終由普選產生。<br />
+        </p><p>
+        現時香港行政長官由代表性不足的選舉委員會選出。全國人大常委會在 2014 年 8 月作出決定，規定最終競逐普選的候選人必需通過篩選，而負責篩選的提名委員會的組成方式，正正與現時的選舉委員會相同。<br />
+        </p><p>
+        人大的的決定僅實現了公民投票權，卻為公民參選權設下不合理的限制。
+        </p><p>
+        社會各界對政府詮釋「普選」的方法感到詫異，希望政府和撤回這個不合理的「假普選」方案，然而政府漠視社會的不滿聲音，繼續誘使市民「袋住先」。
+        </p><p>
+        2014 年 9 月 22 日，香港學生專上聯會發起罷課。事件觸發群眾在政府總部外集會，支援學生運動。本來和平的集會，在警察的武力驅散下演變成街頭佔領。
+        </p><p>
 
-      面對警方的胡椒噴霧和催淚彈，他們只高舉雙手，撐起雨傘保護自己，而不作出任何攻擊。因此，外國媒體給了一個美麗的名字－－雨傘運動，以形容這個和平爭取民主的運動。
-      </p><p>
+        面對警方的胡椒噴霧和催淚彈，他們只高舉雙手，撐起雨傘保護自己，而不作出任何攻擊。因此，外國媒體給了一個美麗的名字－－雨傘運動，以形容這個和平爭取民主的運動。
+        </p><p>
 
-      他們不享受日曬雨淋，也不知道抗爭會否得到成果，甚至不知道能否安全回家。可是，為了香港，他們絕不放棄。<br />
-      </p><p>
-      這個網頁綜合了有關這次《雨傘運動》的資料，我們也製作了一份「懶人包」，讓更多人了解「雨傘運動」發展的經過和原因。<br />
-      </p><p> 
-      歡迎你把此網頁傳給你的朋友。多一個人知道，他們就多一分力量。<br />
-      </p><p>
-      香港加油！
-      </p>
+        他們不享受日曬雨淋，也不知道抗爭會否得到成果，甚至不知道能否安全回家。可是，為了香港，他們絕不放棄。<br />
+        </p><p>
+        這個網頁綜合了有關這次《雨傘運動》的資料，我們也製作了一份「懶人包」，讓更多人了解「雨傘運動」發展的經過和原因。<br />
+        </p><p> 
+        歡迎你把此網頁傳給你的朋友。多一個人知道，他們就多一分力量。<br />
+        </p><p>
+        香港加油！
+        </p>
+        </template>
+        <template bind if="{{preferred_lang == 'en'}}">
+        <!-- ENGLISH -->
+          <p>
+            From class boycott to the Umbrella Revolution;<br>
+            From pepper sprays to tear gas;<br>
+            From  a united street protest, to fierce debates on <i>“to stay or not stay , to retreat or not to retreat”;</i><br>
+            - lots of questions are waiting answers -  <br>
+            But is there something important missed? </br>
+        </p>
+        <hr />
+        <p>
+          Having walked all the way here, perhaps we feel exhausted, demoralised, distracted.
+        </p><p>
 
+          This info kit is aimed to get us back to basic -why the Umbrella Revolution outbreaks and what exactly the Hong Kong citizens fight for.
+        </p><p>
+          We named this as “Umbrella Story”, and translated into various languages to let the world understand the appeal of Hong Kong people.
+        </p><p>
+          Please be welcome to share this webpage. The more the world knows the more support we have. 
+
+          God bless Hong Kong.
+        </p><p>
+          <b>By Umbrella Story Team</b>
+        </p>
+        </template>
+
+        <template bind if="{{preferred_lang == 'jp'}}">
+        <!-- JP -->
+        <b>「傘の革命の物語」</b>
+
+        <p>大学の授業ボイコットに始まり、今「傘の革命」に至る。<br>
+        警察が胡椒スプレーから催涙ガスまで使っても、デモ参加者達は香港の中心街を占拠し続けている。<br>
+        占拠開始から十日以上を経た現在、この平和的な集会を続けるかどうか、大変熱く討論されている。<br>
+        集会の今後の行動を論ずる上で、「傘の革命」最初の目的は何だったのか確認しておこう。<br>
+        </p><p>
+        デモをここまで続けた。デモ参加者達が今感じているのは、辛さ、失望、消沈かもしれない。<br>
+        このパンフレットは「傘の革命」の本来の意味に立ち返り、香港人が求めていることを表明するものである。<br>
+        </p><p>
+        よって、このパンフレットを《傘の革命の物語》と名付けた。<br>
+        各国の言語を使って、香港人の要求や希望を世界へ届けたい。<br>
+        </p><p>
+        このサイトをシェアして欲しい。<br>
+        世界の注目を集められれば、私たちは強くなる。<br>
+        香港の良い未来のために。<br>
+        </p>
+
+        <b>By Umbrella Story Team</b>
+        </template>
+
+        <template bind if="{{preferred_lang == 'de'}}">
+        <!-- German -->
+        <b>Die “Umbrella Story”</b>
+
+        <p>
+        Vom Klassenboykott zur "Umbrella Revolution";<br>
+        Vom Pfefferspray zum Tränengas;<br>
+        Vom solidarischen Strassenprotest zu leidenschaftlichen Debatten “zu bleiben oder nicht bleiben, sich zurückziehen oder nicht zurückziehen”;<br>
+        - viele Fragen warten auf Antworten -  <br>
+        Aber gibt es etwas Wichtiges, das fehlt?<br>
+        </p><p>
+        Nachdem wir den Weg bis hier gegangen sind, fühlen wir uns vielleicht erschöpft, demoralisiert, abgelenkt.<br>
+        </p><p>
+        Dieses Info-Kit zielt darauf ab, uns wieder auf das Ziel zu fokussieren - warum die “Umbrella Revolution” ausgebrochen ist und für was genau die Bürger Hongkongs kämpfen. <br>
+        Wir haben es die "Umbrella Story" genannt und sie in verschiedene Sprachen übersetzt, damit die Welt den Aufruf von uns Menschen in Hong Kong versteht
+        </p><p>
+        Bitte helfen Sie uns, diese Internetseite weiter zu verbreiten und bekannt zu machen. Je mehr die Welt davon mitbekommt, umso mehr Unterstützung haben wir.
+        </p><p>
+        Demokratie für Hong Kong.
+        </p>
+
+        <b>Das Umbrella Story Team</b>
+
+        </template>
       </div>
     </div>
   </template>
