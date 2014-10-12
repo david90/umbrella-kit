@@ -115,9 +115,12 @@
       <page-instagram hidden="true">
       <h1>Latest <code>#umbrellaRevolution</code> on Instagram</h1>
       <div class="instagram instagram-umbrellaRevolution"></div>
-
-      <h4>Live at #UR</h4>
-      <a href="http://umbrellarevolution.happenings.io/"> UmbrellaRevolution @Happenings.io</a>
+      <div layout vertical center >
+      <h3>Live at #UR</h3>
+        <p>
+        <a href="http://umbrellarevolution.happenings.io/" target="_blank"> UmbrellaRevolution @Happenings.io</a>
+        </p>
+      </div>
         <script>
 
             function createPhotoElement(photo) {
