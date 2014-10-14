@@ -90,7 +90,7 @@
         <paper-tab name="home">Home</paper-tab>
         <paper-tab name="about">About</paper-tab>
         <paper-tab name="all">Kits</paper-tab>
-        <paper-tab name="instagram">#UR</paper-tab>
+        <paper-tab name="live">#UR</paper-tab>
         <paper-tab name="credits">Credits</paper-tab>
       </paper-tabs>
     </core-toolbar>
@@ -236,7 +236,7 @@
         page_embed_imgur.preferred_lang = "<?echo $preferred_lang; ?>";
         page_instagram.hidden = "true";
         list.show = "none";
-      } else if (tabs.selected == "instagram") {
+      } else if (tabs.selected == "live") {
         page_about.hide = "true";
         page_credits.hide = "true";
         page_embed_imgur.hide = "true";
