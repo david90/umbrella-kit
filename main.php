@@ -112,12 +112,11 @@
         embed_caption_text_2="<?=LOCALE("embed_caption_text_2");?>"
         >
         </page-embed-imgur>
-      <page-instagram hidden="true">
-      <h1>Latest <code>#umbrellaRevolution</code> on Instagram</h1>
+      <page-instagram hidden="true" center>
+      <h1 style="margin-top: 80px">Live <code>#umbrellaRevolution</code></h1>
       <div class="instagram instagram-umbrellaRevolution"></div>
-      <div layout vertical center >
-      <h3>Live at #UR</h3>
-        <a class="twitter-timeline" href="https://twitter.com/search?q=%23umbrellaRevolution+%23oclp" data-widget-id="521886203319037955">Tweets about "#umbrellaRevolution #oclp"</a>
+      <div layout vertical center class="twitter-widget">
+        <a class="twitter-timeline" href="https://twitter.com/hashtag/umbrellaRevolution" data-widget-id="521886203319037955">#umbrellaRevolution Tweets</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         <p>
         <a href="http://umbrellarevolution.happenings.io/" target="_blank"> UmbrellaRevolution @Happenings.io</a>

@@ -98,10 +98,15 @@
 
   /* instagram */
   .instagram {
+    max-width: 650px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline !important;
     overflow: hidden;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
   }
+
   .instagram-placeholder {
     float: left;
     margin-right: 5px;
@@ -113,5 +118,11 @@
   }
 
   .twitter-widget {
+    max-width: 300px;
+    width: 100%;
+    vertical-align: top;
+    display: inline-block !important;
+    zoom: 1;
+    *display: inline !important;
 
   }
