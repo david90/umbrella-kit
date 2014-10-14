@@ -38,7 +38,8 @@ handlers:
 - url: /assets/
   static_dir: assets/
 
-
+- url: /print/
+  static_dir: print/
 
 # Scripts
 
