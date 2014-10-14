@@ -51,7 +51,7 @@
     margin-bottom:10px;
     margin-top: 0px;
     float: right;
-    position: absolute
+    position: absolute;
     right: 0;
     font-size : 12px;
 
@@ -111,5 +111,7 @@
   .instagram-placeholder .a .div {
     max-width: 100%;
   }
+
+  .twitter-widget {
 
   }
