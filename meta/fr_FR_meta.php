@@ -2,7 +2,8 @@
 <meta property="og:locale:alternate" content="zh_HK" />
 <meta property="og:locale:alternate" content="en_US" />
 <meta property="og:locale:alternate" content="ja_JP" />
-<meta property="og:locale:alternate" content="kr_KR" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="de_DE" />
 <meta property="og:title" content="Umbrella Story-All about #umbrellaRevolution" />
 <!-- <meta property="og:image" content="https://dfg63nb4d89j7.cloudfront.net/web/meta/og-thumb_en_US.png" />
 <meta property="og:image:url" content="https://dfg63nb4d89j7.cloudfront.net/web/meta/og-thumb_en_US.png" /> -->

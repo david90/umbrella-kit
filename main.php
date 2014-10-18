@@ -40,8 +40,8 @@
   
   <?php 
     // TODO, handle this in locale too
-    if (isset($_GET["locale"])) {
-      $s_metafile = 'meta/' .$_GET['locale'] . '_meta.php';
+    if (isset($_GET["fb_locale"])) {
+      $s_metafile = 'meta/' .$_GET['fb_locale'] . '_meta.php';
       if (file_exists($s_metafile))
         include($s_metafile);
       else
@@ -102,6 +102,7 @@
         <a href='/da/'>Dansk</a>
         <a href='/jp/'>日本語</a>
         <a href='/kr/'>한국어</a>
+        <a href='/de/'>Deutsch</a>
       </div>
       <kit-list show="all"></kit-list>
       <page-about hide="true"></page-about>

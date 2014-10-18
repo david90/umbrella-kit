@@ -2,7 +2,8 @@
 <meta property="og:locale:alternate" content="en_US" />
 <meta property="og:locale:alternate" content="fr_FR" />
 <meta property="og:locale:alternate" content="ja_JP" />
-<meta property="og:locale:alternate" content="kr_KR" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="de_DE" />
 <meta property="og:title" content="雨傘故事-#umbrellaRevolution 懶人包" />
 <!-- <meta property="og:image" content="https://dfg63nb4d89j7.cloudfront.net/web/meta/og-thumb_zh_HK.png" />
 <meta property="og:image:url" content="https://dfg63nb4d89j7.cloudfront.net/web/meta/og-thumb_zh_HK.png" /> -->
